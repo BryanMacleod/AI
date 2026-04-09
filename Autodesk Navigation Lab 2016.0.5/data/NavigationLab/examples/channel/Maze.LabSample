@@ -1,0 +1,149 @@
+//Some bots navigating in a maze using a channel trajectory.
+
+labproceduralgeometry outputname=Plane100x50 type=plane planeWidth=50.0 planeLength=100.0
+labgeneratenavgenproj generateIfNavDataHere=true navgenprojname=../../../NavigationLab.output/Plane100x50/Plane100x50.NavGenProj
+
+LabSetCamera eyePos=0,0,65 type=Ortho
+
+
+// Left: lattice
+
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 width=8 length=2 zrotation=0 roundCornerTesselation=12 pos=-44,022.00,0
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 width=8 length=2 zrotation=0 roundCornerTesselation=12 pos=-44,011.25,0
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 width=8 length=2 zrotation=0 roundCornerTesselation=12 pos=-44,000.00,0
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 width=8 length=2 zrotation=0 roundCornerTesselation=12 pos=-44,-11.75,0
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 width=8 length=2 zrotation=0 roundCornerTesselation=12 pos=-44,-24.00,0
+
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 width=5 length=2 zrotation=0 roundCornerTesselation=12 pos=-36,027.65,0
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 width=5 length=2 zrotation=0 roundCornerTesselation=12 pos=-36,020.20,0
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 width=5 length=2 zrotation=0 roundCornerTesselation=12 pos=-36,012.40,0
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 width=5 length=2 zrotation=0 roundCornerTesselation=12 pos=-36,004.25,0
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 width=5 length=2 zrotation=0 roundCornerTesselation=12 pos=-36,-04.25,0
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 width=5 length=2 zrotation=0 roundCornerTesselation=12 pos=-36,-13.10,0
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 width=5 length=2 zrotation=0 roundCornerTesselation=12 pos=-36,-22.30,0
+
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 width=4 length=3 zrotation=0 roundCornerTesselation=6  pos=-30,023.40,0
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 width=4 length=3 zrotation=0 roundCornerTesselation=6  pos=-30,015.95,0
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 width=4 length=3 zrotation=0 roundCornerTesselation=6  pos=-30,008.15,0
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 width=4 length=3 zrotation=0 roundCornerTesselation=6  pos=-30,000.00,0
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 width=4 length=3 zrotation=0 roundCornerTesselation=6  pos=-30,-08.50,0
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 width=4 length=3 zrotation=0 roundCornerTesselation=6  pos=-30,-17.35,0
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 width=4 length=3 zrotation=0 roundCornerTesselation=6  pos=-30,-26.55,0
+
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 width=3 length=2 zrotation=0 roundCornerTesselation=6  pos=-25,-26.9,0
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 width=3 length=2 zrotation=0 roundCornerTesselation=6  pos=-25,-18.7,0
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 width=3 length=2 zrotation=0 roundCornerTesselation=6  pos=-25,-10.9,0
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 width=3 length=2 zrotation=0 roundCornerTesselation=6  pos=-25,-03.5,0
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 width=3 length=2 zrotation=0 roundCornerTesselation=6  pos=-25,003.5,0
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 width=3 length=2 zrotation=0 roundCornerTesselation=6  pos=-25,010.1,0
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 width=3 length=2 zrotation=0 roundCornerTesselation=6  pos=-25,016.3,0
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 width=3 length=2 zrotation=0 roundCornerTesselation=6  pos=-25,022.1,0
+
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 width=2 length=3 zrotation=0 roundCornerTesselation=4  pos=-21,-22.8,0
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 width=2 length=3 zrotation=0 roundCornerTesselation=4  pos=-21,-14.8,0
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 width=2 length=3 zrotation=0 roundCornerTesselation=4  pos=-21,-07.2,0
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 width=2 length=3 zrotation=0 roundCornerTesselation=4  pos=-21,000.0,0
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 width=2 length=3 zrotation=0 roundCornerTesselation=4  pos=-21,006.8,0
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 width=2 length=3 zrotation=0 roundCornerTesselation=4  pos=-21,013.2,0
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 width=2 length=3 zrotation=0 roundCornerTesselation=4  pos=-21,019.2,0
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 width=2 length=3 zrotation=0 roundCornerTesselation=4  pos=-21,024.8,0
+
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 width=1 length=4 zrotation=0 roundCornerTesselation=0  pos=-18,-26.9,0
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 width=1 length=4 zrotation=0 roundCornerTesselation=0  pos=-18,-18.7,0
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 width=1 length=4 zrotation=0 roundCornerTesselation=0  pos=-18,-10.9,0
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 width=1 length=4 zrotation=0 roundCornerTesselation=0  pos=-18,-03.5,0
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 width=1 length=4 zrotation=0 roundCornerTesselation=0  pos=-18,003.5,0
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 width=1 length=4 zrotation=0 roundCornerTesselation=0  pos=-18,010.1,0
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 width=1 length=4 zrotation=0 roundCornerTesselation=0  pos=-18,016.3,0
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 width=1 length=4 zrotation=0 roundCornerTesselation=0  pos=-18,022.1,0
+
+
+// Center: two entricated saws
+
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 width=2 length=50 zrotation=0 roundCornerTesselation=4  pos=-3,0,0
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 width=2 length=50 zrotation=0 roundCornerTesselation=4  pos=03,0,0
+
+GameSpawnTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 posCount=3 pos1=00.0,-20.4,0 pos2=-2,-20.0,0 pos3=-2,-20.8,0 posAltMin=-1 posAltMax=1
+GameSpawnTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 posCount=3 pos1=-0.2,-17.4,0 pos2=02,-17.0,0 pos3=02,-17.8,0 posAltMin=-1 posAltMax=1
+GameSpawnTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 posCount=3 pos1=00.4,-14.4,0 pos2=-2,-14.0,0 pos3=-2,-14.8,0 posAltMin=-1 posAltMax=1
+GameSpawnTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 posCount=3 pos1=-0.6,-11.4,0 pos2=02,-11.0,0 pos3=02,-11.8,0 posAltMin=-1 posAltMax=1
+GameSpawnTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 posCount=3 pos1=00.8,-08.4,0 pos2=-2,-08.0,0 pos3=-2,-08.8,0 posAltMin=-1 posAltMax=1
+GameSpawnTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 posCount=3 pos1=-1.0,-05.4,0 pos2=02,-05.0,0 pos3=02,-05.8,0 posAltMin=-1 posAltMax=1
+GameSpawnTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 posCount=3 pos1=01.0,-02.4,0 pos2=-2,-02.0,0 pos3=-2,-02.8,0 posAltMin=-1 posAltMax=1
+
+GameSpawnTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 posCount=3 pos1=-0.5,002.4,0 pos2=02,002.0,0 pos3=02,002.8,0 posAltMin=-1 posAltMax=1
+GameSpawnTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 posCount=3 pos1=00.5,006.4,0 pos2=-2,006.0,0 pos3=-2,006.8,0 posAltMin=-1 posAltMax=1
+GameSpawnTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 posCount=3 pos1=-0.5,009.4,0 pos2=02,009.0,0 pos3=02,009.8,0 posAltMin=-1 posAltMax=1
+GameSpawnTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 posCount=3 pos1=00.5,011.4,0 pos2=-2,011.0,0 pos3=-2,011.8,0 posAltMin=-1 posAltMax=1
+GameSpawnTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 posCount=3 pos1=-0.5,012.4,0 pos2=02,012.0,0 pos3=02,012.8,0 posAltMin=-1 posAltMax=1
+                                                                                         
+GameSpawnTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 posCount=3 pos1=00.8,016.4,0 pos2=-2,016.0,0 pos3=-2,016.8,0 posAltMin=-1 posAltMax=1
+GameSpawnTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 posCount=3 pos1=-0.6,017.4,0 pos2=02,017.0,0 pos3=02,017.8,0 posAltMin=-1 posAltMax=1
+GameSpawnTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 posCount=3 pos1=00.4,018.4,0 pos2=-2,018.0,0 pos3=-2,018.8,0 posAltMin=-1 posAltMax=1
+GameSpawnTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 posCount=3 pos1=-0.2,019.4,0 pos2=02,019.0,0 pos3=02,019.8,0 posAltMin=-1 posAltMax=1
+GameSpawnTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 posCount=3 pos1=00.0,020.4,0 pos2=-2,020.0,0 pos3=-2,020.8,0 posAltMin=-1 posAltMax=1
+
+
+// Right: a maze 
+
+
+// Wait for TagVolume integration
+GameDelayCommandProcessing delayTime=1.0
+
+
+//
+// Spawn the bots
+//
+
+// Bots running in the lattice
+
+GameSpawnBot count=1 trajectoryMode=Channel spline_length=20 pos=-49,023.25,0
+GameBotSetRoute assignToLastIdle=true count=1 posCount=2    pos1=-49,023.25,0 pos2=-17,023.25,0
+
+GameSpawnBot count=1 trajectoryMode=Channel spline_length=20 pos=-49,019.25,0
+GameBotSetRoute assignToLastIdle=true count=1 posCount=2    pos1=-49,019.25,0 pos2=-17,019.25,0
+
+GameSpawnBot count=1 trajectoryMode=Channel spline_length=20 pos=-49,017.50,0
+GameBotSetRoute assignToLastIdle=true count=1 posCount=2    pos1=-49,017.50,0 pos2=-17,017.50,0
+
+GameSpawnBot count=1 trajectoryMode=Channel spline_length=20 pos=-49,013.50,0
+GameBotSetRoute assignToLastIdle=true count=1 posCount=2    pos1=-49,013.50,0 pos2=-17,013.50,0
+
+GameSpawnBot count=1 trajectoryMode=Channel spline_length=20 pos=-49,011.50,0
+GameBotSetRoute assignToLastIdle=true count=1 posCount=2    pos1=-49,011.50,0 pos2=-17,011.50,0
+
+GameSpawnBot count=1 trajectoryMode=Channel spline_length=20 pos=-49,007.50,0
+GameBotSetRoute assignToLastIdle=true count=1 posCount=2    pos1=-49,007.50,0 pos2=-17,007.50,0
+
+GameSpawnBot count=1 trajectoryMode=Channel spline_length=20 pos=-49,005.25,0
+GameBotSetRoute assignToLastIdle=true count=1 posCount=2    pos1=-49,005.25,0 pos2=-17,005.25,0
+
+GameSpawnBot count=1 trajectoryMode=Channel spline_length=20 pos=-49,001.25,0
+GameBotSetRoute assignToLastIdle=true count=1 posCount=2    pos1=-49,001.25,0 pos2=-17,001.25,0
+
+GameSpawnBot count=1 trajectoryMode=Channel spline_length=20 pos=-49,-01.25,0
+GameBotSetRoute assignToLastIdle=true count=1 posCount=2    pos1=-49,-01.25,0 pos2=-17,-01.25,0
+
+GameSpawnBot count=1 trajectoryMode=Channel spline_length=20 pos=-49,-05.25,0
+GameBotSetRoute assignToLastIdle=true count=1 posCount=2    pos1=-49,-05.25,0 pos2=-17,-05.25,0
+
+GameSpawnBot count=1 trajectoryMode=Channel spline_length=20 pos=-49,-08.00,0
+GameBotSetRoute assignToLastIdle=true count=1 posCount=2    pos1=-49,-08.00,0 pos2=-17,-08.00,0
+
+GameSpawnBot count=1 trajectoryMode=Channel spline_length=20 pos=-49,-12.00,0
+GameBotSetRoute assignToLastIdle=true count=1 posCount=2    pos1=-49,-12.00,0 pos2=-17,-12.00,0
+
+GameSpawnBot count=1 trajectoryMode=Channel spline_length=20 pos=-49,-15.00,0
+GameBotSetRoute assignToLastIdle=true count=1 posCount=2    pos1=-49,-15.00,0 pos2=-17,-15.00,0
+
+GameSpawnBot count=1 trajectoryMode=Channel spline_length=20 pos=-49,-19.00,0
+GameBotSetRoute assignToLastIdle=true count=1 posCount=2    pos1=-49,-19.00,0 pos2=-17,-19.00,0
+
+GameSpawnBot count=1 trajectoryMode=Channel spline_length=20 pos=-49,-22.25,0
+GameBotSetRoute assignToLastIdle=true count=1 posCount=2    pos1=-49,-22.25,0 pos2=-17,-22.25,0
+
+
+// Bots running between the saws
+
+GameSpawnBot count=1 trajectoryMode=Channel spline_length=20 pos=0,24,0
+GameBotSetRoute assignToLastIdle=true count=1 posCount=2 pos1=0,-24,0 pos2=0,24,0

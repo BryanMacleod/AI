@@ -1,0 +1,96 @@
+Pathway editor commands:
+load zone's paths: /path load
+save to database: /path save
+list all paths: /path list
+create a path: /path create <path name>
+delete a path: /path delete <path name>
+draw a path: /path draw <path name>|all
+have an npc run a path: /path npc <npc name> <path name>
+move a path to the ground: /path ground <path name>
+list nodes in path: /path node list <path name>
+add a node: /path node add <path name> <order, defaults to last>
+move a node: /path node move <path name> <order>
+delete a node: /path node delete <path name> <order>
+
+PathNode X=\"%f\" Y=\"%f\" Z=\"%f\" Heading=\"%f\"
+
+
+Usage: /reportheat local - reports all heat on the admin's zone
+/reportheat allworlds [HeatCategoryName] [MinimumHeatLevelToReport] - queries all worlds for the heat matching the constraints.  Empty constraints will dump *all heat* on all worlds.
+Example: /reportheat allworlds Movement.ServerSpeedCheck 10
+/reportheat player <playername> - will dump all heat records for the specified player
+
+defaults are [heat per event] = 0.2, [heat decay] = 1.0, and [heat limit] = 2.5
+
+weapon_addheat
+
+
+Blue = Item Density
+Red = Pathable NPC Density
+Green = Player Heat
+White = Your Position
+
+
+Usage of /npc: 
+/npc health <hp> [name/guid] -Sets the npcs hp to specified value, Admin Target Compatible.
+/npc admintarget guid
+/npc disableSpawners 0 | 1
+/npc spawn <spawnId>
+/npc despawn GUID | all | vehicles | allexcept GUID | everythingbyowner GUID
+/npc damage damageAmount NpcName
+/npc create NpcDefinitionId SpawnDelaySeconds RespawnDelaySeconds
+/npc create2 NpcDefinitionId {Quantity} {Radius}
+/npc find {partialstringmatch} - find the defs that have this string in their name or designer name
+/npc BypassRelevance <0/1>/n/npc info [guid] -compatible with Admin Target
+/npc loc NpcName
+/npc locs NpcDefinitionID -list the locations of npc's by npcdefid on the server/npc setowner [npcGuid] newOwnerGuid (npcGuid will be taken from admin target if not included)
+
+/setBehavior on
+turns zone-wide NPC behaviors on
+
+         "id":"1",
+         "aggro_movement_speed_override":"0",
+         "always_visible":"1",
+         "behavior_root":"0",
+         "can_be_damaged":"1",
+         "can_be_surprised":"1",
+         "chat_color":"1",
+         "collision_scale_percent":"100",
+         "description":"Male Standard",
+         "despawn_composite_effect_id":"1055",
+         "despawn_delay_time":"0",
+         "despawn_effect_delay_time":"0",
+         "dialog_camera_distance":"0",
+         "display_as_elite":"0",
+         "experience_group_id":"1",
+         "expiration_time_seconds":"0",
+         "fade_out_time_override":"0",
+         "field_of_view":"0",
+         "flag_requires_health":"1",
+         "force_click_event":"0",
+         "hide_health_bar":"0",
+         "hide_name":"0",
+         "hide_targeting_reticle":"0",
+         "is_global":"1",
+         "is_path_object":"0",
+         "is_unique":"0",
+         "kill_reward_id":"0",
+         "map_subtext_id":"0",
+         "material_type_override":"0",
+         "model_id":"1",
+         "movement_model":"2",
+         "movement_speed_override":"0",
+         "name_id":"33",
+         "name_id_i18n":{
+            "en":"Zombie"
+         },
+         "name_offset_x":"0",
+         "name_offset_y":"0",
+         "name_offset_z":"0",
+         "no_fade":"1",
+         "personality_id":"0",
+         "profile_id":"1",
+         "race_id":"2",
+         "relevance_requirement_id":"0",
+         "repair_threshold":"0.5",
+         "scale":"1"

@@ -1,0 +1,28 @@
+//Multi-floor Elevator sample.
+LabProceduralGeometry outputname=AdvancedElevatorLabSample type=elevator platformsize=10.0 platformheight=3.0 platformcount=5
+LabGenerateNavGenProj generateIfNavDataHere=true navgenprojname=../../../NavigationLab.output/AdvancedElevatorLabSample/AdvancedElevatorLabSample.NavGenProj
+GameSpawnElevator axisPos=-6,0,0 width=2.0 length=2.0 entryCount=5 entryA=-4.7,0,0 entryB=-4.7,0,3 entryC=-4.7,0,6 entryD=-4.7,0,9 entryE=-4.7,0,12
+GameSpawnElevator axisPos=6,0,0 width=2.0 length=2.0 entryCount=5 entryA=4.7,0,0 entryB=4.7,0,3 entryC=4.7,0,6 entryD=4.7,0,9 entryE=4.7,0,12
+GameSpawnElevator axisPos=0,6,0 width=2.0 length=2.0 entryCount=5 entryA=-0,4.7,0 entryB=0,4.7,3 entryC=0,4.7,6 entryD=0,4.7,9 entryE=0,4.7,12
+GameSpawnElevator axisPos=0,-6,0 width=2.0 length=2.0 entryCount=5 entryA=-0,-4.7,0 entryB=0,-4.7,3 entryC=0,-4.7,6 entryD=0,-4.7,9 entryE=0,-4.7,12
+GameSpawnBot count=1 avoidance=true pos=2,2,0
+GameBotSetRoute count=1 posCount=4 pos1=2,2,0 pos2=2,2,3 pos3=0,2,6 pos4=2,-2,9
+GameSpawnBot count=1 avoidance=true pos=2,-2,3
+GameBotSetRoute count=1 posCount=4 pos1=2,-2,3 pos2=2,2,12 pos3=0,-2,0 pos4=-2,-2,6
+GameSpawnBot count=1 avoidance=true pos=-2,2,6
+GameBotSetRoute count=1 posCount=4 pos1=-2,2,6 pos2=2,-2,0 pos3=0,-2,9 pos4=-2,2,3
+GameSpawnBot count=1 avoidance=true pos=-2,-2,9
+GameBotSetRoute count=1 posCount=4 pos1=-2,-2,9 pos2=-2,-2,3 pos3=0,2,9 pos4=2,-2,3
+GameSpawnBot count=1 avoidance=true pos=2,2,12
+GameBotSetRoute count=1 posCount=4 pos1=2,2,12 pos2=-2,2,9 pos3=0,-2,6 pos4=2,2,3
+GameSpawnBot count=1 avoidance=true pos=-2,2,0
+GameBotSetRoute count=1 posCount=4 pos1=-2,2,0 pos2=-2,2,3 pos3=0,-2,6 pos4=-2,2,9
+GameSpawnBot count=1 avoidance=true pos=-2,-2,3
+GameBotSetRoute count=1 posCount=4 pos1=-2,-2,3 pos2=-2,-2,12 pos3=0,2,0 pos4=2,2,6
+GameSpawnBot count=1 avoidance=true pos=-2,-2,6
+GameBotSetRoute count=1 posCount=4 pos1=-2,-2,6 pos2=-2,-2,0 pos3=0,2,9 pos4=2,-2,3
+GameSpawnBot count=1 avoidance=true pos=2,2,9
+GameBotSetRoute count=1 posCount=4 pos1=2,2,9 pos2=2,2,3 pos3=0,-2,9 pos4=-2,2,3
+GameSpawnBot count=1 avoidance=true pos=-2,2,12
+GameBotSetRoute count=1 posCount=4 pos1=-2,2,12 pos2=2,2,9 pos3=0,2,6 pos4=-2,-2,3
+LabSetCameraAttitude eyePos=19.7276,17.5666,9.17266 yaw=-2.39233 pitch=-0.12814

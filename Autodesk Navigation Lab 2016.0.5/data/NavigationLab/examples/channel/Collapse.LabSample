@@ -1,0 +1,78 @@
+// This sample shows partly collapsed Channels and how a bot follows paths in such cases.
+//
+// The bot is configured so that Channels are collapsed to the string-pulled path
+// on the parts where gates are less than 1m large.
+//
+// The bot follows a route between obstacles. Obstacles and way points are placed so that
+// the Channels along the path from on way point to the next are as described thereafter:
+//  0 => 1: The Channel collapses once on a short distance, to pass a thin door.
+//  1 => 2: Channel is collapsed once on 10m, the second part waves around obstacles.
+//  2 => 3: Channel is collapsed 3 times in the course and one more time at the end.
+//  3 => 4: There is just one Channel, the path starts and ends without Channel.
+//  4 => 5: The Channel is completly collapsed on the whole path.
+//  5 => 0: The path satrt without Channel and comes back to start position.
+//
+// You can set the GateCollapseWidth parameter back to its default 0.01m value in
+// BotsConfig -> Path -> Channel to compare with the default Channel behaviour.
+
+LabProceduralGeometry outputname=Plane100x50 type=plane planeWidth=50.0 planeLength=100.0
+LabGenerateNavGenProj generateIfNavDataHere=true navgenprojname=../../../NavigationLab.output/Plane100x50/Plane100x50.NavGenProj
+
+LabSetCamera type=Ortho eyePos=-20,10,50 targetPos=-20,10,0
+
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 pos=-40,23,0 width=2 length=8  zRotation=90 roundCornerTesselation=4
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 pos=-40,16,0 width=2 length=12 zRotation=0  roundCornerTesselation=4
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 pos=-40,1,0  width=4 length=15 zRotation=0  roundCornerTesselation=0
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 pos=3,15,0   width=2 length=86 zRotation=90 roundCornerTesselation=0
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 pos=22,11,0  width=2 length=56 zRotation=90 roundCornerTesselation=0
+
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 pos=-30,23,0 width=6 length=6  zRotation=0  roundCornerTesselation=0
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 pos=-20,18,0 width=6 length=6  zRotation=0  roundCornerTesselation=0
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 pos=-10,23,0 width=6 length=6  zRotation=0  roundCornerTesselation=0
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 pos=-4,18,0  width=4 length=4  zRotation=45 roundCornerTesselation=0
+
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 pos=20,20,0  width=1 length=8  zRotation=0  roundCornerTesselation=0
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 pos=26,26,0  width=1 length=8  zRotation=0  roundCornerTesselation=0
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 pos=30,20,0  width=1 length=8  zRotation=0  roundCornerTesselation=0
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 pos=33,27,0  width=1 length=8  zRotation=0  roundCornerTesselation=0
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 pos=35,20,0  width=1 length=8  zRotation=0  roundCornerTesselation=0
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 pos=45,23,0  width=2 length=8  zRotation=90 roundCornerTesselation=0
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 pos=42,19,0  width=2 length=8  zRotation=0  roundCornerTesselation=0
+
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 pos=41,14,0  width=2 length=10 zRotation=90 roundCornerTesselation=0
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 pos=44,12,0  width=1 length=14 zRotation=90 roundCornerTesselation=36
+
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 pos=36,14,0  width=2 length=0 zRotation=0 roundCornerTesselation=36
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 pos=34,12,0  width=2 length=0 zRotation=0 roundCornerTesselation=36
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 pos=32,14,0  width=2 length=0 zRotation=0 roundCornerTesselation=36
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 pos=30,12,0  width=2 length=0 zRotation=0 roundCornerTesselation=36
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 pos=28,14,0  width=2 length=0 zRotation=0 roundCornerTesselation=36
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 pos=26,12,0  width=2 length=0 zRotation=0 roundCornerTesselation=36
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 pos=24,14,0  width=2 length=0 zRotation=0 roundCornerTesselation=36
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 pos=22,12,0  width=2 length=0 zRotation=0 roundCornerTesselation=36
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 pos=20,14,0  width=2 length=0 zRotation=0 roundCornerTesselation=36
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 pos=18,12,0  width=2 length=0 zRotation=0 roundCornerTesselation=36
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 pos=16,14,0  width=2 length=0 zRotation=0 roundCornerTesselation=36
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 pos=14,12,0  width=2 length=0 zRotation=0 roundCornerTesselation=36
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 pos=12,14,0  width=2 length=0 zRotation=0 roundCornerTesselation=36
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 pos=10,12,0  width=2 length=0 zRotation=0 roundCornerTesselation=36
+
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 pos=1,14,0  width=2 length=14 zRotation=90 roundCornerTesselation=36
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 pos=0,12,0  width=1 length=12 zRotation=90 roundCornerTesselation=36
+
+GameDelayCommandProcessing delayTime=1.0
+
+GameSpawnBot trajectorymode=channel gateCollapseWidth=1.0 pos=-20,10,0 
+GameBotSetRoute assignToLastIdle=true posCount=6 posMaxCount=6 pos1=-20,10,0 pos2=-45,20,0 pos3=5,20,0 pos4=45,24.01,0 pos5=44,12.51,0 pos6=0,12.51,0
+
+// Activate ad-hoc visual debug rendering 
+LabSetupVisualDebugView element="Bot"       field="Wireframe"           selected=true  notSelected=true
+LabSetupVisualDebugView element="Bot"       field="Channel"             selected=true  notSelected=true
+LabSetupVisualDebugView element="Bot"       field="Extremity Polylines" selected=true  notSelected=true
+LabSetupVisualDebugView element="Bot"       field="Gate type - color"   selected=false notSelected=false
+LabSetupVisualDebugView element="Bot"       field="Gates"               selected=true  notSelected=true
+LabSetupVisualDebugView element="Bot"       field="Outline"             selected=true  notSelected=true
+LabSetupVisualDebugView element="Bot"       field="Live Path"           selected=true  notSelected=true
+LabSetupVisualDebugView element="Bot"       field="Spline"              selected=true  notSelected=true
+LabSetupVisualDebugView element="Bot"       field="Spline arc sector"   selected=true  notSelected=true
+LabSetupVisualDebugView element="TagVolume" field="Contour"             selected=false notSelected=false

@@ -1,0 +1,7 @@
+//Two bots avoiding each other in a sharp corner.
+LabProceduralGeometry outputname=corner135 type=corner corridorWidth=3.0 cornerAngle=135
+LabGenerateNavGenProj generateIfNavDataHere=true navgenprojname=../../../NavigationLab.output/corner135/corner135.NavGenProj
+GameSpawnBot count=1 avoidance=true pos=-10,0,0 
+GameSpawnBot count=1 avoidance=true pos=10,0,0 
+GameBotSetRoute count=2 posCount=2 pos1=-10,0,0 pos2=10,0,0
+labsetcamera eyePos=0.0,10,40 targetPos=0.01,10,39 type=fly

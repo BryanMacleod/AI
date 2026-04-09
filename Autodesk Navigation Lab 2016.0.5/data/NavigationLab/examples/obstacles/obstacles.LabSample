@@ -1,0 +1,14 @@
+//Spawn all kinds of moving obstacles (rotating, translating) and a bot avoiding them.
+LabOpenFile filename=obstacles.NavGenProj 
+LabGenerateNavGenProj navgenprojname=obstacles.NavGenProj
+LabHideSeedPoints
+LabHideGenerationTagVolumes
+LabHideCellBoxes
+GameSpawnBot count=1 avoidance=true pos=33,-45,15 enableSlowingDown=false avoidanceAngleSpan=190 minimalTimeToCollision=5
+GameBotSetRoute count=1 posCount=2 pos1=33,-75,7.6 pos2=33,-45,15
+GameSpawnBoxObstacle pos=35,-57,9.3 target=35,-57,9.3 halfextents=1.5,0.5,0.5
+GameSpawnBoxObstacle pos=33,-70,7.8 target=33,-70,7.8 halfextents=1,2.5,0.5 yawpitchroll=45,0,0
+GameSpawnBoxObstacle pos=33,-48,14.3 target=33,-48,14.3 halfextents=1.5,1,0.5 yawpitchroll=15,0,0 velocity=3,0,0
+GameSpawnBoxObstacle pos=33,-64,7.6 target=33,-64,7.6 halfextents=0.5,2.5,0.5 localcenter=0,2.5,0.5 rotationvelocity=0,0,45
+GameSpawnBoxObstacle pos=35,-55,10.4 target=35,-55,10.4 halfextents=0.5,0.5,0.5 velocity=6,0,0 rotationvelocity=0,90,0
+LabSetCameraAttitude eyePos=27.9542,-85.1014,20.34 yaw=1.33144 pitch=-0.43165

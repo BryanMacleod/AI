@@ -1,0 +1,15 @@
+// This LabSample demos the use of the CanGo chain to follow another entity based on its CanGo visibility.
+LabOpenFile filename=2-CanGoChainPath.NavGenProj 
+LabGenerateNavGenProj navgenprojname=2-CanGoChainPath.NavGenProj
+LabHideSeedPoints
+LabHideGenerationTagVolumes
+LabHideCellBoxes
+
+GameSpawnBot count=1 avoidance=false maxDesiredLinearSpeed=3 pos=-21.2955,-23.519,14.7676
+GameAssignPlayerBehavior
+GameBotSetRoute assignToLastIdle=true count=1 posCount=4 pos1=5.64929,-7.99775,15.018 pos2=17.961,-41.4409,14.9997 pos3=-0.704906,9.55269,14.9433 pos4=-108.461,-37.5666,8.56649
+
+GameSpawnBot count=1 avoidance=false maxDesiredLinearSpeed=2 pos=-49.1408,-24.0462,9.33421
+GameAssignMonsterBehavior chainsegmentcount=5 arrivalradius=1.0 maxchainlength=50.0
+
+LabSetCameraAttitude eyePos=-29.9429,-10.1537,71.1804 yaw=-1.58824 pitch=-1.47702

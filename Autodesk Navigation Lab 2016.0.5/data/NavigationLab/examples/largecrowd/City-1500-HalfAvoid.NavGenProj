@@ -1,0 +1,120 @@
+<?xml version="1.0" ?>
+<outputDir>
+	<baseDir>../../..</baseDir>
+	<relativeDir>NavigationLab.output/examples/largecrowd/City-2500-HalfAvoid</relativeDir>
+</outputDir>
+<config>
+    <entityHeight>2.000000</entityHeight>
+    <entityRadius>0.400000</entityRadius>
+    <stepMax>0.600000</stepMax>
+    <slopeMax>50.000000</slopeMax>
+    <rasterPrecision>0.200000</rasterPrecision>
+    <cellSize>20.000000</cellSize>
+    <altitudeTolerance>0.500000</altitudeTolerance>
+    <backFaceTrianglesWalkable>1</backFaceTrianglesWalkable>
+    <CoordSystem>
+        <OneMeter>100.000000</OneMeter>
+        <X>CLIENT_X</X>
+        <Y>CLIENT_Y</Y>
+        <Z>CLIENT_Z</Z>
+    </CoordSystem>
+    <altitudeToleranceSamplingStep>0.300000</altitudeToleranceSamplingStep>
+    <noiseReductionSurface>1.000000</noiseReductionSurface>
+    <minConnectedSurface>10.000000</minConnectedSurface>
+    <navTagMinPixelArea>6</navTagMinPixelArea>
+    <navTagRasterMergeTolerance>0.100000</navTagRasterMergeTolerance>
+    <navmeshEarClippingTolerance>0.000000</navmeshEarClippingTolerance>
+    <navRasterDistanceMapMetric>Manhattan</navRasterDistanceMapMetric>
+    <useMultiCore>TRUE</useMultiCore>
+    <doEnableLimitedMemoryMode>FALSE</doEnableLimitedMemoryMode>
+    <outputFilesAreLittleEndian>FALSE</outputFilesAreLittleEndian>
+    <IntermediateData>
+        <Write>FALSE</Write>
+    </IntermediateData>
+    <visualDebug-use>FALSE</visualDebug-use>
+    <visualDebug-file></visualDebug-file>
+</config>
+<sector>
+	<name></name>
+	<guid>AB90EC32-DD46-2A41-8850-39D83FDB3292</guid>
+	<doBuild>TRUE</doBuild>
+	<geometries>
+		<geometry>
+			<filepath>../../obj/city_sidewalks.obj</filepath>
+			<counterClockWise>TRUE</counterClockWise>
+		</geometry>
+		<geometry>
+			<filepath>../../obj/city_buildings.obj</filepath>
+			<counterClockWise>TRUE</counterClockWise>
+		</geometry>
+		<geometry>
+			<filepath>../../obj/city_crosswalks.obj</filepath>
+			<counterClockWise>TRUE</counterClockWise>
+		</geometry>
+	</geometries>
+</sector>
+<tagVolumes>
+    <tagVolume>
+        <terrainType>0</terrainType>
+        <minAltitude>-15.498048</minAltitude>
+        <maxAltitude>119.995117</maxAltitude>
+        <extrudedPolyline>
+            <X>-46820.265625</X>
+            <Y>31718.619141</Y>
+            <Z>19.995117</Z>
+            <X>-27862.548828</X>
+            <Y>32900.523438</Y>
+            <Z>14.721680</Z>
+            <X>-28330.898438</X>
+            <Y>-11003.607422</Y>
+            <Z>14.501953</Z>
+            <X>27460.125000</X>
+            <Y>-11553.202148</Y>
+            <Z>19.995117</Z>
+            <X>27923.931641</X>
+            <Y>-47961.054688</Y>
+            <Z>19.995117</Z>
+            <X>-47040.835938</X>
+            <Y>-47616.937500</Y>
+            <Z>19.995117</Z>
+        </extrudedPolyline>
+		<navTag>
+			<isExclusive>1</isExclusive>
+		</navTag>
+    </tagVolume>
+    <tagVolume>
+        <terrainType>0</terrainType>
+        <minAltitude>-21.577150</minAltitude>
+        <maxAltitude>119.995117</maxAltitude>
+        <extrudedPolyline>
+            <X>-46853.296875</X>
+            <Y>30506.343750</Y>
+            <Z>19.970703</Z>
+            <X>17679.310547</X>
+            <Y>30203.839844</Y>
+            <Z>19.995117</Z>
+            <X>17277.025391</X>
+            <Y>-12075.744141</Y>
+            <Z>19.995117</Z>
+            <X>46869.718750</X>
+            <Y>-12096.784180</Y>
+            <Z>19.995117</Z>
+            <X>46804.253906</X>
+            <Y>48335.785156</Y>
+            <Z>19.995117</Z>
+            <X>-47340.867188</X>
+            <Y>48231.968750</Y>
+            <Z>8.422852</Z>
+        </extrudedPolyline>
+		<navTag>
+			<isExclusive>1</isExclusive>
+		</navTag>
+    </tagVolume>
+</tagVolumes>
+<seedpoints>
+    <seedpoint>
+        <X>216.498596</X>
+        <Y>-625.600586</Y>
+        <Z>20.001221</Z>
+    </seedpoint>
+</seedpoints>

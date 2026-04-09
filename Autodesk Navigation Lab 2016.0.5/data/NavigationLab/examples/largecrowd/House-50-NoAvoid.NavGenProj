@@ -1,0 +1,34 @@
+<?xml version="1.0" ?>
+<outputDir>
+	<baseDir>../../..</baseDir>
+	<relativeDir>NavigationLab.output/examples/largecrowd/House-50-NoAvoid</relativeDir>
+</outputDir>
+<config>
+    <entityHeight>1.800000</entityHeight>
+    <entityRadius>0.300000</entityRadius>
+    <stepMax>0.500000</stepMax>
+    <slopeMax>50.000000</slopeMax>
+    <rasterPrecision>0.100000</rasterPrecision>
+    <CoordSystem>
+        <OneMeter>1.000000</OneMeter>
+        <X>CLIENT_X</X>
+        <Y>CLIENT_Y</Y>
+        <Z>CLIENT_Z</Z>
+    </CoordSystem>
+</config>
+<sector>
+	<doBuild>TRUE</doBuild>
+	<geometries>
+		<geometry>
+			<filepath>../../obj/house.obj</filepath>
+			<counterClockWise>TRUE</counterClockWise>
+		</geometry>
+	</geometries>
+</sector>
+<seedpoints>
+    <seedpoint>
+        <X>3</X>
+        <Y>6</Y>
+        <Z>9</Z>
+    </seedpoint>
+</seedpoints>

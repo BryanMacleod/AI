@@ -1,0 +1,20 @@
+// This LabSample demos a specific implementation for melee combat used as a codebase in a real MMO game.
+// The limit of this implementation was those of the game itself no avoidance was activated (neither bots nor obstacles).
+// This sample spawns 1 target and 3 fighters.
+// You can select the target and assign it a route or a destination.
+// When the target moves near the fighters, they will follow the target and come close to the target to combat it.
+LabOpenFile filename=meleecombat.NavGenProj 
+LabGenerateNavGenProj navgenprojname=meleecombat.NavGenProj
+LabHideSeedPoints
+LabHideGenerationTagVolumes
+LabHideCellBoxes
+GameSpawnBot count=1 avoidance=false pos=-34.4675,-28.3519,13.4239
+GameMeleeCombat behavior=fighter meleeradius=2.6 assignToLastIdle=true maxDesiredLinearSpeed=3
+GameSpawnBot count=1 avoidance=false pos=-10.3726,-20.0775,14.6317
+GameMeleeCombat behavior=fighter meleeradius=1 assignToLastIdle=true maxDesiredLinearSpeed=3
+GameSpawnBot count=1 avoidance=false pos=-13.4742,-54.2739,8.1845
+GameMeleeCombat behavior=fighter meleeradius=0.5 assignToLastIdle=true maxDesiredLinearSpeed=3
+GameSpawnBot count=1 avoidance=false pos=-28.2331,-67.0028,7.47251
+GameBotSetRoute assignToLastIdle=true count=1 posCount=6 pos1=-23.875195,-32.150360,14.508528 pos2=-4.382206,-31.570992,15.008398 pos3=2.781856,-9.214752,15.017096 pos4=23.805746,-37.315224,15.008394 pos5=25.1197,11.1544,15.0003 pos6=46.000963,11.687180,15.008394
+GameMeleeCombat behavior=target meleeradius=0.6 assignToLastIdle=true maxDesiredLinearSpeed=3
+LabSetCameraAttitude eyePos=12.5024,-61.4495,225.244 yaw=1.56033 pitch=-1.31994

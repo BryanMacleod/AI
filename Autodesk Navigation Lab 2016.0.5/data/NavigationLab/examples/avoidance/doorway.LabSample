@@ -1,0 +1,7 @@
+//Two bots avoiding each other passing a door.
+LabProceduralGeometry outputname=doorway type=door corridorWidth=5.0 doorWidth=1.0 doorLength=0.5
+LabGenerateNavGenProj generateIfNavDataHere=true navgenprojname=../../../NavigationLab.output/doorway/doorway.NavGenProj
+GameSpawnBot count=1 avoidance=true pos=-10,0,0
+GameSpawnBot count=1 avoidance=true pos=10,0,0
+GameBotSetRoute count=2 posCount=2 pos1=-10,0,0 pos2=10,0,0
+LabSetCameraAttitude eyePos=0.294055,0.596813,19.6117 yaw=1.57778 pitch=-1.5608

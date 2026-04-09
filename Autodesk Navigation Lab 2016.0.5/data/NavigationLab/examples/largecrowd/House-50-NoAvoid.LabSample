@@ -1,0 +1,10 @@
+//House - 50 bots - No Avoidance
+LabOpenFile filename=House-50-NoAvoid.NavGenProj
+LabGenerateNavGenProj navgenprojname=House-50-NoAvoid.NavGenProj
+LabHideSeedPoints
+LabHideGenerationTagVolumes
+LabHideCellBoxes
+GameSpawnRandomBots count=50 avoidance=false
+LabSetCameraAttitude eyePos=20.3347,34.7253,13.5102 yaw=-2.01901 pitch=-0.255289
+GameSpawnTagVolume databaseIndex=0 navTag=1,-1,-1,-1,-1,-1,-1,-1 posCount=4 posMaxCount=6 pos1=-17,12,0 pos2=-15,12,0 pos3=-15,14.5,0 pos4=-17,14.5,0 pos5=0.000000,0.000000,0.000000 pos6=0.000000,0.000000,0.000000 posAltMin=-0.5 posAltMax=11.5
+GameSpawnElevator axisPos=-16.4,13.3,0 width=2.0 length=2.0 entryCount=4 entryA=-14.4,13.3,0 entryB=-14.4,13.3,3 entryC=-14.4,13.3,6 entryD=-14.4,13.3,9

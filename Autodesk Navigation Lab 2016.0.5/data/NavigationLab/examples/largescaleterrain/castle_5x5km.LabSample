@@ -1,0 +1,13 @@
+// This LabSample demos the generation on a large scale terrain.
+// Here opencastle is used as a base geometry that is mirrored to make a terrain of 5x5 Km.
+// The NavGenProj contains one sector for opencastle with some seedpoints.
+// The sector will be mirrored (geometry, seedpoint) in the GeneratorInputProducer so the geneation will run as if it was effectively different sectors.
+// The result of the generation will be one NavData file per sector.
+// Once generated, the NavData will be sent over the network to the LabGame, be patient this can be quite long.
+LabShowDialog title="Long preprocessing" text="The first time this sample is launched, it generates data which could last a few minutes. Do you want to continue?" 
+LabGenerateNavGenProj navgenprojname=castle_5x5km.NavGenProj
+LabHideSeedPoints
+LabHideGenerationTagVolumes
+LabHideCellBoxes
+GameSetQueryQueueTimeBudget queueName=MainThread_pathfinder budgetInMs=3
+GameSpawnRandomBots count=500 avoidance=false

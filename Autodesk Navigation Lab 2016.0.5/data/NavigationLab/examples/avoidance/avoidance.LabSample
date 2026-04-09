@@ -1,0 +1,42 @@
+//Seventeen bots avoiding each other coming from 3 different directions.
+LabOpenFile filename=avoidance.NavGenProj 
+LabGenerateNavGenProj navgenprojname=avoidance.NavGenProj
+LabHideSeedPoints
+LabHideGenerationTagVolumes
+LabHideCellBoxes
+GameSpawnBot count=1 maxDesiredLinearSpeed=4 avoidance=true pos=19,-18,15
+GameBotSetRoute count=1 posCount=2 pos1=19,-18,15 pos2=52,-43,15
+GameSpawnBot count=1 maxDesiredLinearSpeed=4 avoidance=true pos=48,-43,15
+GameBotSetRoute count=1 posCount=2 pos1=23,-18,15 pos2=48,-43,15
+GameSpawnBot count=1 maxDesiredLinearSpeed=4 avoidance=true pos=27,-18,15
+GameBotSetRoute count=1 posCount=2 pos1=27,-18,15 pos2=44,-43,15
+GameSpawnBot count=1 maxDesiredLinearSpeed=4 avoidance=true pos=40,-43,15
+GameBotSetRoute count=1 posCount=2 pos1=31,-18,15 pos2=40,-43,15
+GameSpawnBot count=1 maxDesiredLinearSpeed=4 avoidance=true pos=35,-18,15
+GameBotSetRoute count=1 posCount=2 pos1=35,-18,15 pos2=36,-43,15
+GameSpawnBot count=1 maxDesiredLinearSpeed=4 avoidance=true pos=32,-43,15
+GameBotSetRoute count=1 posCount=2 pos1=39,-18,15 pos2=32,-43,15
+GameSpawnBot count=1 maxDesiredLinearSpeed=4 avoidance=true pos=43,-18,15
+GameBotSetRoute count=1 posCount=2 pos1=43,-18,15 pos2=28,-43,15
+GameSpawnBot count=1 maxDesiredLinearSpeed=4 avoidance=true pos=24,-43,15
+GameBotSetRoute count=1 posCount=2 pos1=47,-18,15 pos2=24,-43,15
+GameSpawnBot count=1 maxDesiredLinearSpeed=4 avoidance=true pos=51,-18,15
+GameBotSetRoute count=1 posCount=2 pos1=51,-18,15 pos2=20,-43,15
+GameSpawnBot count=1 maxDesiredLinearSpeed=4 avoidance=true pos=19,-41,15
+GameBotSetRoute count=1 posCount=2 pos1=19,-41,15 pos2=52,-41,15
+GameSpawnBot count=1 maxDesiredLinearSpeed=4 avoidance=true pos=19,-37,15
+GameBotSetRoute count=1 posCount=2 pos1=19,-37,15 pos2=52,-37,15
+GameSpawnBot count=1 maxDesiredLinearSpeed=4 avoidance=true pos=19,-33,15
+GameBotSetRoute count=1 posCount=2 pos1=19,-33,15 pos2=52,-33,15
+GameSpawnBot count=1 maxDesiredLinearSpeed=4 avoidance=true pos=19,-29,15
+GameBotSetRoute count=1 posCount=2 pos1=19,-29,15 pos2=52,-29,15
+GameSpawnBot count=1 maxDesiredLinearSpeed=4 avoidance=true pos=19,-27,15
+GameBotSetRoute count=1 posCount=2 pos1=19,-27,15 pos2=52,-27,15
+GameSpawnBot count=1 maxDesiredLinearSpeed=4 avoidance=true pos=19,-25,15
+GameBotSetRoute count=1 posCount=2 pos1=19,-25,15 pos2=52,-25,15
+GameSpawnBot count=1 maxDesiredLinearSpeed=4 avoidance=true pos=19,-23,15
+GameBotSetRoute count=1 posCount=2 pos1=19,-23,15 pos2=52,-23,15
+GameSpawnBot count=1 maxDesiredLinearSpeed=4 avoidance=true pos=19,-21,15
+GameBotSetRoute count=1 posCount=2 pos1=19,-21,15 pos2=52,-21,15
+LabSetCamera eyePos=53.2712,-37.2519,53.8038 targetPos=52.9674,-37.1115,52.8615 type=fly
+GameSetCamera active=true assignToFirstBot=true mode=FirstPerson oscillation=true fovInDegrees=80.0f

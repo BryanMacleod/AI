@@ -1,0 +1,63 @@
+<?xml version="1.0" ?>
+<database>
+    <databaseIndex>0</databaseIndex>
+</database>
+<outputDir>
+    <baseDir>C:\Program Files\Autodesk\Stingray\1.0.31.0\tools_external\navigation\data</baseDir>
+    <relativeDir>NavigationLab.output/temp</relativeDir>
+</outputDir>
+<config>
+    <entityHeight>2.000000</entityHeight>
+    <entityRadius>0.400000</entityRadius>
+    <stepMax>0.600000</stepMax>
+    <slopeMax>50.000000</slopeMax>
+    <rasterPrecision>0.200000</rasterPrecision>
+    <cellSize>20.000000</cellSize>
+    <altitudeTolerance>0.500000</altitudeTolerance>
+    <defaultNavTag>
+        <blindDatas />
+    </defaultNavTag>
+    <distanceFromHoles>-1.000000</distanceFromHoles>
+    <simplifiationTolerance>0.400000</simplifiationTolerance>
+    <superSmoothExtraTolerance>0.000000</superSmoothExtraTolerance>
+    <altitudeToleranceSamplingStep>0.300000</altitudeToleranceSamplingStep>
+    <noiseReductionSurface>0.100000</noiseReductionSurface>
+    <minNavigableSurface>10.000000</minNavigableSurface>
+    <navTagMinPixelArea>6</navTagMinPixelArea>
+    <navTagRasterMergeTolerance>0.100000</navTagRasterMergeTolerance>
+    <navRasterDistanceMapMetric>Chessboard</navRasterDistanceMapMetric>
+    <backFaceTrianglesWalkable>TRUE</backFaceTrianglesWalkable>
+    <climbMax>0.000000</climbMax>
+    <emptyDefaultNavTagColor>
+        <R>0</R>
+        <G>0</G>
+        <B>205</B>
+    </emptyDefaultNavTagColor>
+    <nonEmptyDefaultNavTagColor>
+        <R>65</R>
+        <G>105</G>
+        <B>225</B>
+    </nonEmptyDefaultNavTagColor>
+    <nonDefaultNavTagColor>
+        <R>0</R>
+        <G>139</G>
+        <B>139</B>
+    </nonDefaultNavTagColor>
+    <doGenerateAbstractGraphs>0</doGenerateAbstractGraphs>
+    <abstractGraphExtentsInNumberOfCells>10</abstractGraphExtentsInNumberOfCells>
+    <abstractGraphWorkingMemorySizeLimit>104857600</abstractGraphWorkingMemorySizeLimit>
+    <useMultiCore>TRUE</useMultiCore>
+    <doEnableLimitedMemoryMode>FALSE</doEnableLimitedMemoryMode>
+    <outputFilesAreLittleEndian>FALSE</outputFilesAreLittleEndian>
+    <visualDebug-use>FALSE</visualDebug-use>
+    <visualDebug-file></visualDebug-file>
+    <IntermediateData>
+        <Write>FALSE</Write>
+    </IntermediateData>
+    <CoordSystem>
+        <OneMeter>1.000000</OneMeter>
+        <X>CLIENT_X</X>
+        <Y>CLIENT_Y</Y>
+        <Z>CLIENT_Z</Z>
+    </CoordSystem>
+</config>

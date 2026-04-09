@@ -1,0 +1,149 @@
+<?xml version="1.0" ?>
+<database>
+    <databaseIndex>0</databaseIndex>
+</database>
+<outputDir>
+	<baseDir>../../..</baseDir>
+	<relativeDir>NavigationLab.output/examples/generation/castle_multisectors_swappable</relativeDir>
+</outputDir>
+<config>
+    <entityHeight>2.000000</entityHeight>
+    <entityRadius>0.400000</entityRadius>
+    <stepMax>0.600000</stepMax>
+    <slopeMax>50.000000</slopeMax>
+    <rasterPrecision>0.200000</rasterPrecision>
+    <cellSize>20.000000</cellSize>
+    <altitudeTolerance>0.500000</altitudeTolerance>
+    <backFaceTrianglesWalkable>1</backFaceTrianglesWalkable>
+    <altitudeToleranceSamplingStep>0.300000</altitudeToleranceSamplingStep>
+    <noiseReductionSurface>1.000000</noiseReductionSurface>
+    <minNavigableSurface>10.000000</minNavigableSurface>
+    <navTagMinPixelArea>6</navTagMinPixelArea>
+    <navTagRasterMergeTolerance>0.100000</navTagRasterMergeTolerance>
+    <navmeshEarClippingTolerance>0.000000</navmeshEarClippingTolerance>
+    <navRasterDistanceMapMetric>Manhattan</navRasterDistanceMapMetric>
+    <useMultiCore>TRUE</useMultiCore>
+    <doEnableLimitedMemoryMode>FALSE</doEnableLimitedMemoryMode>
+    <outputFilesAreLittleEndian>FALSE</outputFilesAreLittleEndian>
+    <visualDebug-use>FALSE</visualDebug-use>
+    <visualDebug-file></visualDebug-file>
+    <IntermediateData>
+        <Write>FALSE</Write>
+    </IntermediateData>
+    <CoordSystem>
+        <OneMeter>1.000000</OneMeter>
+        <X>CLIENT_X</X>
+        <Y>CLIENT_Y</Y>
+        <Z>CLIENT_Z</Z>
+    </CoordSystem>
+</config>
+<sector>
+    <name>castle_Island</name>
+    <guid>CB33F4E3-DE3D-CB4A-96C5-C096EA7BFB32</guid>
+    <doBuild>TRUE</doBuild>
+    <geometries>
+        <geometry>
+            <filepath>../../obj/CastleMultisector/castle_Island.obj</filepath>
+            <counterClockWise>TRUE</counterClockWise>
+        </geometry>
+    </geometries>
+    <seedpoints>
+        <seedpoint>
+            <X>-45.511292</X>
+            <Y>-14.443695</Y>
+            <Z>8.379004</Z>
+        </seedpoint>
+    </seedpoints>
+</sector>
+<sector>
+    <name>castle_Main</name>
+    <guid>46B59B40-DFEE-FF4A-81C7-44E16EACD40D</guid>
+    <doBuild>TRUE</doBuild>
+    <geometries>
+        <geometry>
+            <filepath>../../obj/CastleMultisector/castle_Main.obj</filepath>
+            <counterClockWise>TRUE</counterClockWise>
+        </geometry>
+    </geometries>
+    <seedpoints>
+        <seedpoint>
+            <X>-21.232529</X>
+            <Y>46.630707</Y>
+            <Z>10.574896</Z>
+        </seedpoint>
+        <seedpoint>
+            <X>-4.137886</X>
+            <Y>30.968674</Y>
+            <Z>10.388021</Z>
+        </seedpoint>
+        <seedpoint>
+            <X>26.752228</X>
+            <Y>28.737747</Y>
+            <Z>13.588232</Z>
+        </seedpoint>
+    </seedpoints>
+</sector>
+<sector>
+    <name>castle_Main_alternate</name>
+    <guid>0F9E27A4-685D-3F4E-A0CB-F4D0279D9CEA</guid>
+    <doBuild>TRUE</doBuild>
+    <geometries>
+        <geometry>
+            <filepath>../../obj/CastleMultisector/castle_Main_alternate.obj</filepath>
+            <counterClockWise>TRUE</counterClockWise>
+        </geometry>
+    </geometries>
+    <seedpoints>
+        <seedpoint>
+            <X>-20.898994</X>
+            <Y>45.605820</Y>
+            <Z>10.574881</Z>
+        </seedpoint>
+    </seedpoints>
+</sector>
+<sector>
+    <name>castle_Base</name>
+    <guid>F8945471-D2BD-084D-B7CD-F912E89783EC</guid>
+    <doBuild>TRUE</doBuild>
+    <geometries>
+        <geometry>
+            <filepath>../../obj/CastleMultisector/castle_Base.obj</filepath>
+            <counterClockWise>TRUE</counterClockWise>
+        </geometry>
+    </geometries>
+    <seedpoints>
+        <seedpoint>
+            <X>45.276253</X>
+            <Y>-64.999054</Y>
+            <Z>5.742529</Z>
+        </seedpoint>
+    </seedpoints>
+</sector>
+<sector>
+    <name>castle_Base_alternate</name>
+    <guid>07B5D7C6-BA46-0C4D-9542-791DFADEE4DD</guid>
+    <doBuild>TRUE</doBuild>
+    <geometries>
+        <geometry>
+            <filepath>../../obj/CastleMultisector/castle_Base_alternate.obj</filepath>
+            <counterClockWise>TRUE</counterClockWise>
+        </geometry>
+    </geometries>
+    <seedpoints>
+        <seedpoint>
+            <X>43.391907</X>
+            <Y>-62.514771</Y>
+            <Z>5.742484</Z>
+        </seedpoint>
+    </seedpoints>
+</sector>
+<exclusiveSectors>
+    <exclusiveGuids>
+        <guid>46B59B40-DFEE-FF4A-81C7-44E16EACD40D</guid>
+        <guid>0F9E27A4-685D-3F4E-A0CB-F4D0279D9CEA</guid>
+    </exclusiveGuids>
+    <exclusiveGuids>
+        <guid>F8945471-D2BD-084D-B7CD-F912E89783EC</guid>
+        <guid>07B5D7C6-BA46-0C4D-9542-791DFADEE4DD</guid>
+    </exclusiveGuids>
+</exclusiveSectors>

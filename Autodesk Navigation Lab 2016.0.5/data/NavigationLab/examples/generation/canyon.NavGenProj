@@ -1,0 +1,53 @@
+<?xml version="1.0" ?>
+<outputDir>
+	<baseDir>../../..</baseDir>
+	<relativeDir>NavigationLab.output/examples/generation/canyon</relativeDir>
+</outputDir>
+<config>
+    <entityHeight>3.000000</entityHeight>
+    <entityRadius>0.600000</entityRadius>
+    <stepMax>0.590000</stepMax>
+    <slopeMax>46.000000</slopeMax>
+    <rasterPrecision>0.300000</rasterPrecision>
+    <cellSize>20.000000</cellSize>
+    <altitudeTolerance>0.500000</altitudeTolerance>
+    <backFaceTrianglesWalkable>1</backFaceTrianglesWalkable>
+    <CoordSystem>
+        <OneMeter>1.000000</OneMeter>
+        <X>CLIENT_X</X>
+        <Y>CLIENT_Y</Y>
+        <Z>CLIENT_Z</Z>
+    </CoordSystem>
+    <altitudeToleranceSamplingStep>0.300000</altitudeToleranceSamplingStep>
+    <noiseReductionSurface>1.000000</noiseReductionSurface>
+    <minConnectedSurface>10.000000</minConnectedSurface>
+    <navTagMinPixelArea>6</navTagMinPixelArea>
+    <navTagRasterMergeTolerance>0.100000</navTagRasterMergeTolerance>
+    <navmeshEarClippingTolerance>0.000000</navmeshEarClippingTolerance>
+    <navRasterDistanceMapMetric>Manhattan</navRasterDistanceMapMetric>
+    <useMultiCore>TRUE</useMultiCore>
+    <doEnableLimitedMemoryMode>FALSE</doEnableLimitedMemoryMode>
+    <outputFilesAreLittleEndian>TRUE</outputFilesAreLittleEndian>
+    <IntermediateData>
+        <Write>FALSE</Write>
+    </IntermediateData>
+    <visualDebug-use>FALSE</visualDebug-use>
+    <visualDebug-file></visualDebug-file>
+</config>
+<sector>
+	<guid>1B39A9A6-CA26-B24D-866E-2645B5BEFAD7</guid>
+	<doBuild>TRUE</doBuild>
+	<geometries>
+		<geometry>
+			<filepath>../../obj/canyon.obj</filepath>
+			<counterClockWise>TRUE</counterClockWise>
+		</geometry>
+	</geometries>
+</sector>
+<seedpoints>
+    <seedpoint>
+        <X>-16.770147</X>
+        <Y>-78.314499</Y>
+        <Z>-9.999130</Z>
+    </seedpoint>
+</seedpoints>

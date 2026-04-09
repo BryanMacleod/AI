@@ -1,0 +1,17 @@
+//A ladder smart object that can be used by several entites at the same time.
+LabProceduralGeometry outputname=LadderLabSample type=ladder platformsize=10.0 ladderheigth=4.0 ladderdepth=0.5
+LabGenerateNavGenProj generateIfNavDataHere=true navgenprojname=../../../NavigationLab.output/LadderLabSample/LadderLabSample.NavGenProj
+GameSpawnLadder pos1=-1,0,0 pos2=1,0,4 width=2.0 depth=0.3
+GameSpawnBot count=1 avoidance=true pos=-9,0,0
+GameBotSetRoute count=1 posCount=2 pos1=-9,0,0 pos2=9,0,5
+GameSpawnBot count=1 avoidance=true pos=-7,2,0
+GameBotSetRoute count=1 posCount=2 pos1=-9,2,0 pos2=9,2,5
+GameSpawnBot count=1 avoidance=true pos=-5,-2,0
+GameBotSetRoute count=1 posCount=2 pos1=-9,-2,0 pos2=9,-2,5
+GameSpawnBot count=1 avoidance=true pos=9,0,5
+GameBotSetRoute count=1 posCount=2 pos1=9,0,5 pos2=-9,0,0
+GameSpawnBot count=1 avoidance=true pos=7,2,5
+GameBotSetRoute count=1 posCount=2 pos1=9,2,5 pos2=-9,2,0
+GameSpawnBot count=1 avoidance=true pos=5,-2,5
+GameBotSetRoute count=1 posCount=2 pos1=9,-2,5 pos2=-9,-2,0
+LabSetCameraAttitude eyePos=-10.8586,10.463,9.80577 yaw=-0.835499 pitch=-0.540038

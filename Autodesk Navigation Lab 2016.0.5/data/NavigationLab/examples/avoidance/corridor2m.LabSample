@@ -1,0 +1,7 @@
+//Two bots avoiding each other in a corridor.
+LabProceduralGeometry outputname=corridor2m type=corridor corridorWidth=2.0
+LabGenerateNavGenProj generateIfNavDataHere=true navgenprojname=../../../NavigationLab.output/corridor2m/corridor2m.NavGenProj
+GameSpawnBot count=1 avoidance=true pos=-10,0,0
+GameSpawnBot count=1 avoidance=true pos=10,0,0
+GameBotSetRoute count=2 posCount=2 pos1=-10,0,0 pos2=10,0,0
+LabSetCameraAttitude eyePos=0.294055,0.596813,19.6117 yaw=1.57778 pitch=-1.5608

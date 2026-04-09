@@ -1,0 +1,29 @@
+//Giants and humans wander in the city using 2 different databases.
+//Change the visual debugged database with the database combobox in the toolbar's group "NavData"
+LabOpenFile filename=city_giants.NavGenProj
+LabSetCameraAttitude eyePos=44.8761,-41.7104,27.5335 yaw=0.746931 pitch=-0.531397
+LabGenerateNavGenProj navgenprojname=city_giants.NavGenProj
+GameSetCamera active=true assignToFirstBot=true mode=FirstPerson oscillation=true fovInDegrees=80.0f
+GameSpawnBot count=1 maxDesiredLinearSpeed=4 avoidance=true pos=48,-43,15 databaseIndex=1
+GameBotSetRoute count=1 posCount=2 pos1=43.437057,-24.736132,14.731699 pos2=84.217743,-26.336906,14.731699
+GameSpawnBot count=1 maxDesiredLinearSpeed=4 avoidance=true pos=87.666908,-8.398155,14.731699 databaseIndex=1
+GameBotSetRoute count=1 posCount=2 pos1=87.666908,-8.398155,14.731699 pos2=26.038727,-20.274860,14.731703
+GameSpawnBot count=1 maxDesiredLinearSpeed=4 avoidance=true pos=48.8263,-20.1205,14.9214 databaseIndex=1
+GameBotSetRoute count=1 posCount=2 pos1=48.8263,-20.1205,14.9214 pos2=80.8575,-40.2358,14.7451
+GameSpawnBot count=1 maxDesiredLinearSpeed=4 avoidance=true pos=44.8068,-8.9395,15.018 databaseIndex=1
+GameBotSetRoute count=1 posCount=2 pos1=44.8068,-8.9395,15.018 pos2=91.9039,-27.7379,14.9598
+LabOpenFile filename=city_humans.NavGenProj
+LabGenerateNavGenProj navgenprojname=city_humans.NavGenProj
+LabHideSeedPoints
+LabHideGenerationTagVolumes
+LabHideCellBoxes
+GameSpawnBot count=1 maxDesiredLinearSpeed=4 avoidance=true pos=19,-18,15 databaseIndex=0
+GameBotSetRoute count=1 posCount=2 pos1=46.437057,-24.736132,14.731699 pos2=84.217743,-26.336906,14.731699
+GameSpawnBot count=1 maxDesiredLinearSpeed=4 avoidance=true pos=51.719707,-24.634953,15.017100 databaseIndex=0
+GameBotSetRoute count=1 posCount=2 pos1=84.477722,-24.381128,14.731697 pos2=51.719707,-24.634953,15.017100
+GameSpawnBot count=1 maxDesiredLinearSpeed=4 avoidance=true pos=90.1815,-42.5136,14.7317 databaseIndex=0
+GameBotSetRoute count=1 posCount=2 pos1=51.1286,-18.2157,15.0171 pos2=90.1815,-42.5136,14.7317
+GameSpawnBot count=1 maxDesiredLinearSpeed=4 avoidance=true pos=82.9178,-21.5338,15.0171 databaseIndex=0
+GameBotSetRoute count=1 posCount=2 pos1=60.8067,-40.8263,14.7317 pos2=82.9178,-21.5338,15.0171
+
+ 

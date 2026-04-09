@@ -1,0 +1,9 @@
+//Canyon - 1000 bots - No Avoidance
+LabOpenFile filename=Canyon-1000-NoAvoid.NavGenProj
+LabGenerateNavGenProj navgenprojname=Canyon-1000-NoAvoid.NavGenProj
+LabHideSeedPoints
+LabHideGenerationTagVolumes
+LabHideCellBoxes
+GameSetDesiredFPS fps=30
+GameSpawnRandomBots count=1000 avoidance=false
+LabSetCameraAttitude eyePos=34.5991,153.06,1260.07 yaw=-1.57995 pitch=-1.45258

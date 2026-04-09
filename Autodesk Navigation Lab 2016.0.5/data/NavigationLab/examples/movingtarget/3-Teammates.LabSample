@@ -1,0 +1,18 @@
+// This LabSample demos how to leverage the CanGochain to build team mates.
+LabOpenFile filename=3-Teammates.NavGenProj 
+LabGenerateNavGenProj navgenprojname=3-Teammates.NavGenProj
+LabHideSeedPoints
+LabHideGenerationTagVolumes
+LabHideCellBoxes
+
+GameSpawnBot count=1 avoidance=false maxDesiredLinearSpeed=3 pos=62.152,67.1217,7.84409
+GameAssignPlayerBehavior slotcount=2
+GameBotSetRoute assignToLastIdle=true count=1 posCount=2 pos1=62.152,67.1217,7.84409 pos2=49.4335,13.1064,15.018
+
+GameSpawnBot count=1 avoidance=false maxDesiredLinearSpeed=3.5 pos=62.152,67.1217,7.84409
+GameAssignTeammateBehavior chainsegmentcount=10 arrivalradius=0.0 maxchainlength=100.0 slotindex=0
+
+GameSpawnBot count=1 avoidance=false maxDesiredLinearSpeed=3.5 pos=62.152,67.1217,7.84409
+GameAssignTeammateBehavior chainsegmentcount=10 arrivalradius=0.0 maxchainlength=100.0 slotindex=1
+
+LabSetCameraAttitude eyePos=49.1118,38.9459,52.963 yaw=3.13407 pitch=-1.42466

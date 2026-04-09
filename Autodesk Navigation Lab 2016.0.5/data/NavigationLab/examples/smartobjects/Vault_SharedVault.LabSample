@@ -1,0 +1,17 @@
+//A vault smart object that can be used by several entites at the same time.
+LabProceduralGeometry outputname=NavTag_Door type=door corridorWidth=9.0 doorWidth=1 doorLength=0.5
+LabGenerateNavGenProj generateIfNavDataHere=true navgenprojname=../../../NavigationLab.output/NavTag_Door/NavTag_Door.NavGenProj
+GameSpawnVault pos1=0,-1,0 pos2=0,1,0 depth=0.5 height=1.5
+GameSpawnBot count=1 avoidance=true pos=-9,0,0 maxDesiredLinearSpeed=2.0
+GameBotSetRoute count=1 posCount=2 pos1=-9,0,0 pos2=9,0,0
+GameSpawnBot count=1 avoidance=true pos=-7,2,0 maxDesiredLinearSpeed=2.0
+GameBotSetRoute count=1 posCount=2 pos1=-9,2,0 pos2=9,2,0
+GameSpawnBot count=1 avoidance=true pos=-5,-2,0 maxDesiredLinearSpeed=2.0
+GameBotSetRoute count=1 posCount=2 pos1=-9,-2,0 pos2=9,-2,0
+GameSpawnBot count=1 avoidance=true pos=9,0,0 maxDesiredLinearSpeed=2.0
+GameBotSetRoute count=1 posCount=2 pos1=9,0,0 pos2=-9,0,0
+GameSpawnBot count=1 avoidance=true pos=7,2,0 maxDesiredLinearSpeed=2.0
+GameBotSetRoute count=1 posCount=2 pos1=9,2,0 pos2=-9,2,0
+GameSpawnBot count=1 avoidance=true pos=5,-2,0 maxDesiredLinearSpeed=2.0
+GameBotSetRoute count=1 posCount=2 pos1=9,-2,0 pos2=-9,-2,0
+LabSetCameraAttitude eyePos=6.87752,-7.19889,7.63569 yaw=2.14769 pitch=-0.607523

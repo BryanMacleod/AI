@@ -1,0 +1,7 @@
+//Simple jump sample.
+LabProceduralGeometry outputname=JumpLabSample type=ladder platformsize=10.0 ladderheigth=5.0 ladderdepth=0
+LabGenerateNavGenProj generateIfNavDataHere=true navgenprojname=../../../NavigationLab.output/JumpLabSample/JumpLabSample.NavGenProj
+GameSpawnJump pos1=-1,0,0 pos2=1,0,5
+GameSpawnBot count=1 avoidance=true pos=-9,0,0
+GameBotSetRoute count=1 posCount=2 pos1=-9,0,0 pos2=9,0,5
+LabSetCameraAttitude eyePos=0.613417,19.7942,10.5575 yaw=-1.5825 pitch=-0.39343

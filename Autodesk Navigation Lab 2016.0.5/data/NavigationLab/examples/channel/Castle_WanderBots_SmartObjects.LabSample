@@ -1,0 +1,43 @@
+// Shows some bots using a channel trajectory to navigate along routes presenting full 3D cases and using some SmartObjects.
+
+labopenfile filename=Castle.NavGenProj
+labgeneratenavgenproj navgenprojname=Castle.NavGenProj
+labhideseedpoints
+LabHideGenerationTagVolumes
+labhidecellboxes
+
+LabSetCameraAttitude eyePos=-106.253,-110.434,101.425 yaw=0.84474 pitch=-0.552382
+
+GameSpawnJump pos1=-97.2,64.9,9.1 pos2=-91.2,69.2,22.5
+GameSpawnJump pos1=-84.4,64.2,19.5 pos2=-80.0,67.0,13.7
+GameSpawnJump pos1=88.8,-5.0,7.8 pos2=89.2,-19.2,6.1
+GameSpawnJump pos1=31.391808,44.159008,13.865173 pos2=31.961920,48.261902,17.326279
+
+GameSpawnPlank pos1=-15.3,88.1,15.7 pos2=-14.7,72.7,16.5
+GameSpawnPlank pos1=-61.6,58.0,16.5 pos2=-81.3,57.0,18.1
+GameSpawnPlank pos1=-59.5,99.2,18.4 pos2=-50.5,83.5,16.5
+GameSpawnPlank pos1=-54.1,79.7,16.5 pos2=-46.2,72.9,16.8
+
+//GameSpawnPlank pos1=40.7,-9.2,5.6 pos2=44.5,-42.2,5.5
+//GameSpawnPlank pos1=8.2,-37.2,5.9 pos2=36.5,-47.8,5.3
+//GameSpawnPlank pos1=-36.1,46.3,16.8 pos2=-41.7,38.5,16.5
+
+//GameSpawnLadder pos1=-26.399055,75.699661,16.717222 pos2=-23.089973,75.096191,10.575002 width=1.000000 depth=0.500000
+//GameSpawnLadder pos1=-47.142551,47.023548,16.724224 pos2=-46.642967,46.376900,10.575001 width=1.000000 depth=0.500000
+
+GameSpawnLadder pos1=-59.3312,74.3674,16.5855 pos2=-61.9982,76.0404,11.0877 width=1.000000 depth=0.500000
+GameSpawnLadder pos1=-48.9781,65.7695,16.7894 pos2=-44.8506,63.7931,23.1766 width=1.000000 depth=0.500000
+
+GameSpawnBot count=1 wander=true pos=-49.0,57.0,16.8 minDestinationDistance=50 maxDestinationDistance=150 trajectoryMode=Channel spline_length=20.0
+GameSpawnBot count=1 wander=true pos=-34.8,47.8,16.8 minDestinationDistance=50 maxDestinationDistance=150 trajectoryMode=Channel spline_length=20.0
+GameSpawnBot count=1 wander=true pos=-25.2,53.6,16.8 minDestinationDistance=50 maxDestinationDistance=150 trajectoryMode=Channel spline_length=20.0
+GameSpawnBot count=1 wander=true pos=-25.3,70.4,16.8 minDestinationDistance=50 maxDestinationDistance=150 trajectoryMode=Channel spline_length=20.0
+GameSpawnBot count=1 wander=true pos=-48.4,67.9,16.8 minDestinationDistance=50 maxDestinationDistance=150 trajectoryMode=Channel spline_length=20.0
+GameSpawnBot count=1 wander=true pos=-43.0,55.0,23.2 minDestinationDistance=50 maxDestinationDistance=150 trajectoryMode=Channel spline_length=20.0
+GameSpawnBot count=1 wander=true pos=-42.8,67.2,23.2 minDestinationDistance=50 maxDestinationDistance=150 trajectoryMode=Channel spline_length=20.0
+GameSpawnBot count=1 wander=true pos=-32.8,54.1,23.2 minDestinationDistance=50 maxDestinationDistance=150 trajectoryMode=Channel spline_length=20.0
+GameSpawnBot count=1 wander=true pos=-28.3,65.6,23.2 minDestinationDistance=50 maxDestinationDistance=150 trajectoryMode=Channel spline_length=20.0
+
+GameSpawnRandomBots count=200 minDestinationDistance=50 maxDestinationDistance=150 trajectoryMode=Channel
+
+GameSetQueryQueueTimeBudget budgetInMs=5.000000 queueName=MainThread_PathFinder

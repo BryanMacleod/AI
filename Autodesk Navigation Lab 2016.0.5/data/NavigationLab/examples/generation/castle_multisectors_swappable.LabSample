@@ -1,0 +1,7 @@
+//Loads castleMultisector.NavGenProj
+//How to use: Click Generate, play with the Exclusive Sector Activate
+LabOpenFile filename=castle_multisectors_swappable.NavGenProj
+LabShowSeedPoints
+LabShowGenerationTagVolumes
+LabShowCellBoxes
+LabSetCameraAttitude eyePos=-54.5024,-163.102,201.761 yaw=1.23188 pitch=-0.87824

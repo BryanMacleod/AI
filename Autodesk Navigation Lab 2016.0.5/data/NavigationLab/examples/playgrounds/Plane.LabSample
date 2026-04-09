@@ -1,0 +1,3 @@
+// This door is similar to the simple door, but this time the bot can open it by itself. Therefore, we always pathfind thru it. In effect, we suspend the bot control, and then surrender the logic to the door. 
+LabProceduralGeometry outputname=NavTag_Door type=door corridorWidth=60.0 doorWidth=60 doorLength=1
+LabGenerateNavGenProj generateIfNavDataHere=true navgenprojname=../../../NavigationLab.output/NavTag_Door/NavTag_Door.NavGenProj

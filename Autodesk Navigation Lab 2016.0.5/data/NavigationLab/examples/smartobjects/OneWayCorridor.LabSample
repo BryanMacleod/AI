@@ -1,0 +1,15 @@
+// This LabSample creates TagVolume that is only OneWay-crossable in term of PathFinding
+// The bot goes close the TagVolume, then look for a destination very close the other way of the TagVolume,
+// you can notice that the path found is not the most direct one since the bot has to go all around the ring
+LabProceduralGeometry outputName=OneWayCorridorLabSample type=donut
+LabGenerateNavGenProj generateIfNavDataHere=true navgenprojname=../../../NavigationLab.output/OneWayCorridorLabSample/OneWayCorridorLabSample.NavGenProj
+LabHideSeedPoints
+LabHideGenerationTagVolumes
+LabHideCellBoxes
+
+LabSetupVisualDebugView element=Bot field="Live path" notSelected=true selected=true
+GameSpawnOneWayCorridor pos1=-9,-9,0 pos2=-7.5,-7.5,0 depth=1.5
+GameSpawnOneWayCorridor pos1=12,0,0 pos2=10,0,0 depth=1.5
+GameSpawnBot count=1 avoidance=true pos=-8.90495,8.4234,0
+GameBotSetRoute count=1 posCount=4 pos2=-9.8132,-7.15291,0 pos3=-7.22363,-9.47875,0 pos4=11.1491,-1.69425,0 pos1=10.3833,0.144828,0
+LabSetCameraAttitude eyePos=1.04907e-06,-24,27.1529 yaw=1.5708 pitch=-0.785398

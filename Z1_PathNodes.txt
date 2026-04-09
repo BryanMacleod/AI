@@ -1,0 +1,2 @@
+PathNode X="%f" Y="%f" Z="%f" Heading="%f"
+All Floats

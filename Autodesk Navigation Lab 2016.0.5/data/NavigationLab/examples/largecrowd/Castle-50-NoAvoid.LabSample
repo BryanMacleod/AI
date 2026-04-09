@@ -1,0 +1,8 @@
+//Castle - 50 bots - No Avoidance
+LabOpenFile filename=Castle-50-NoAvoid.NavGenProj
+LabGenerateNavGenProj navgenprojname=Castle-50-NoAvoid.NavGenProj
+LabHideSeedPoints
+LabHideGenerationTagVolumes
+LabHideCellBoxes
+GameSpawnRandomBots count=50 avoidance=false
+LabSetCameraAttitude eyePos=22.2936,-100.69,93.6433 yaw=1.76137 pitch=-0.632281

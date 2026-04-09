@@ -1,0 +1,96 @@
+<?xml version="1.0" ?>
+<outputDir>
+	<baseDir>../../..</baseDir>
+	<relativeDir>NavigationLab.output/examples/generation/village_cellbox</relativeDir>
+</outputDir>
+<config>
+    <entityHeight>2.000000</entityHeight>
+    <entityRadius>0.400000</entityRadius>
+    <stepMax>0.600000</stepMax>
+    <slopeMax>50.000000</slopeMax>
+    <rasterPrecision>0.200000</rasterPrecision>
+    <cellSize>20.000000</cellSize>
+    <altitudeTolerance>0.500000</altitudeTolerance>
+    <backFaceTrianglesWalkable>1</backFaceTrianglesWalkable>
+    <CoordSystem>
+        <OneMeter>1.000000</OneMeter>
+        <X>CLIENT_X</X>
+        <Y>CLIENT_Y</Y>
+        <Z>CLIENT_Z</Z>
+    </CoordSystem>
+    <altitudeToleranceSamplingStep>0.300000</altitudeToleranceSamplingStep>
+    <noiseReductionSurface>1.000000</noiseReductionSurface>
+	<minNavigableSurface>2.000000</minNavigableSurface>
+    <navTagMinPixelArea>6</navTagMinPixelArea>
+    <navTagRasterMergeTolerance>0.100000</navTagRasterMergeTolerance>
+    <navmeshEarClippingTolerance>0.000000</navmeshEarClippingTolerance>
+    <navRasterDistanceMapMetric>Manhattan</navRasterDistanceMapMetric>
+    <useMultiCore>TRUE</useMultiCore>
+    <doEnableLimitedMemoryMode>FALSE</doEnableLimitedMemoryMode>
+    <outputFilesAreLittleEndian>FALSE</outputFilesAreLittleEndian>
+    <IntermediateData>
+        <Write>FALSE</Write>
+    </IntermediateData>
+    <visualDebug-use>FALSE</visualDebug-use>
+    <visualDebug-file></visualDebug-file>
+</config>
+<sector>
+	<name></name>
+	<guid>2CFA98AA-B89B-604F-8465-BD3A1F80B477</guid>
+	<doBuild>TRUE</doBuild>
+	<geometries>
+		<geometry>
+			<filepath>../../obj/Village_250x200_multisector/Village_250x200_Sector_A.obj</filepath>
+			<counterClockWise>TRUE</counterClockWise>
+		</geometry>
+	</geometries>
+	<cellBox>
+		<min x="0" y="-12"></min>
+		<max x="12" y="0"></max>
+	</cellBox>
+</sector>
+<sector>
+	<name></name>
+	<guid>D811209D-9216-0143-8520-CA0F42839B1D</guid>
+	<doBuild>TRUE</doBuild>
+	<geometries>
+		<geometry>
+			<filepath>../../obj/Village_250x200_multisector/Village_250x200_Sector_B.obj</filepath>
+			<counterClockWise>TRUE</counterClockWise>
+		</geometry>
+	</geometries>
+	<cellBox>
+		<min x="-1" y="1"></min>
+		<max x="12" y="12"></max>
+	</cellBox>
+</sector>
+<sector>
+	<name></name>
+	<guid>1C4C4F45-7162-1047-A317-37040F2F54B1</guid>
+	<doBuild>TRUE</doBuild>
+	<geometries>
+		<geometry>
+			<filepath>../../obj/Village_250x200_multisector/Village_250x200_Sector_C.obj</filepath>
+			<counterClockWise>TRUE</counterClockWise>
+		</geometry>
+	</geometries>
+	<cellBox>
+		<min x="-15" y="1"></min>
+		<max x="-2" y="12"></max>
+	</cellBox>
+</sector>
+<sector>
+	<name></name>
+	<guid>CF100517-3860-1B45-AECA-9A233F5DE60E</guid>
+	<doBuild>TRUE</doBuild>
+	<geometries>
+		<geometry>
+			<filepath>../../obj/Village_250x200_multisector/Village_250x200_Sector_D.obj</filepath>
+			<counterClockWise>TRUE</counterClockWise>
+		</geometry>
+	</geometries>
+	<cellBox>
+		<min x="-15" y="-12"></min>
+		<max x="-1" y="0"></max>
+	</cellBox>
+</sector>

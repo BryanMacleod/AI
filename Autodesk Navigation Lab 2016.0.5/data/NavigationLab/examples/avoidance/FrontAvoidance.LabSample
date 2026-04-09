@@ -1,0 +1,469 @@
+//Two groups of bots avoiding each other when traversing an area with dynamic and static obstacles.
+LabOpenFile filename=FrontAvoidance.NavGenProj
+LabGenerateNavGenProj navgenprojname=FrontAvoidance.NavGenProj
+LabHideSeedPoints
+LabHideGenerationTagVolumes
+LabHideCellBoxes
+
+GameSpawnTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 posCount=5 posMaxCount=6 pos1=33.858212,-63.990349,7.909786 pos2=28.626305,-66.600578,8.088642 pos3=32.715324,-71.863808,8.018188 pos4=40.033516,-70.466827,8.060036 pos5=35.705414,-68.157120,7.897243 pos6=0.000000,0.000000,0.000000 posAltMin=7.597243 posAltMax=9.088642
+GameSpawnTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 posCount=5 posMaxCount=6 pos1=2.385704,-63.159710,8.197422 pos2=8.824337,-66.907455,7.997734 pos3=3.014193,-71.114983,8.065353 pos4=-0.604128,-67.150230,8.180859 pos5=3.026224,-66.542984,8.132469 pos6=0.000000,0.000000,0.000000 posAltMin=7.697734 posAltMax=9.197422
+GameSpawnTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 posCount=6 posMaxCount=6 pos1=20.191162,-69.356056,7.923389 pos2=14.831774,-78.757065,7.988590 pos3=19.862930,-84.919075,7.975067 pos4=25.965988,-84.978424,7.969120 pos5=21.858149,-76.529175,7.994385 pos6=22.734236,-72.518562,7.993538 posAltMin=7.623389 posAltMax=8.994385
+
+GameSpawnBoxObstacle count=1 material=0 integrateInNavmesh=false usePhysics=false pos=46.166084,-63.857368,8.597122 target=45.080715,-79.774521,8.530762 halfextents=2.250000,0.750000,0.500000 localcenter=0.000000,0.000000,0.000000 yawPitchRoll=0.000000,0.000000,0.000000 velocity=2.000000,0.000000,0.000000 rotationvelocity=0.000000,0.000000,-30.000000
+GameSpawnBoxObstacle count=1 material=0 integrateInNavmesh=false usePhysics=false pos=52.840408,-79.677589,8.715679 target=51.576389,-65.019318,8.544399 halfextents=0.750000,0.750000,0.500000 localcenter=0.000000,0.000000,0.000000 yawPitchRoll=0.000000,0.000000,0.000000 velocity=3.000000,0.000000,0.000000 rotationvelocity=0.000000,0.000000,45.000000
+GameSpawnBoxObstacle count=1 material=0 integrateInNavmesh=false usePhysics=false pos=57.872292,-79.614723,8.835579 target=60.468590,-64.868752,8.554825 halfextents=1.500000,0.375000,0.500000 localcenter=0.000000,0.000000,0.000000 yawPitchRoll=0.000000,0.000000,0.000000 velocity=3.000000,0.000000,0.000000 rotationvelocity=0.000000,0.000000,-45.000000
+GameSpawnBoxObstacle count=1 material=0 integrateInNavmesh=false usePhysics=false pos=-9.233917,-60.061523,8.586685 target=-7.245735,-79.289978,8.609344 halfextents=3.000000,1.125000,0.500000 localcenter=0.000000,0.000000,0.000000 yawPitchRoll=0.000000,0.000000,0.000000 velocity=1.000000,0.000000,0.000000 rotationvelocity=0.000000,0.000000,-15.000000
+GameSpawnBoxObstacle count=1 material=0 integrateInNavmesh=false usePhysics=false pos=13.626511,-82.984268,8.483891 target=-1.314997,-72.764778,8.614861 halfextents=2.250000,0.750000,0.500000 localcenter=0.000000,0.000000,0.000000 yawPitchRoll=0.000000,0.000000,0.000000 velocity=2.000000,0.000000,0.000000 rotationvelocity=0.000000,0.000000,-30.000000
+
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=65.0,-67.5,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false 
+GameBotSetRoute count=1 posCount=2 pos1=65.0,-67.5,8.0 pos2=-20.0,-67.5,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=67.5,-67.5,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=67.5,-67.5,8.0 pos2=-17.5,-67.5,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=70.0,-67.5,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=70.0,-67.5,8.0 pos2=-15.0,-67.5,8.0
+
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=65.0,-70.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=65.0,-70.0,8.0 pos2=-20.0,-70.0,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=67.5,-70.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=67.5,-70.0,8.0 pos2=-17.5,-70.0,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=70.0,-70.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=70.0,-70.0,8.0 pos2=-15.0,-70.0,8.0
+
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=65.0,-72.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=65.0,-72.0,8.0 pos2=-20.0,-72.0,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=67.5,-72.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=67.5,-72.0,8.0 pos2=-17.5,-72.0,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=70.0,-72.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=70.0,-72.0,8.0 pos2=-15.0,-72.0,8.0
+
+
+
+
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-20.0,-67.5,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=65.0,-67.5,8.0 pos2=-20.0,-67.5,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-17.5,-67.5,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=67.5,-67.5,8.0 pos2=-17.5,-67.5,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-15.0,-67.5,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=70.0,-67.5,8.0 pos2=-15.0,-67.5,8.0
+
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-20.0,-70.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=65.0,-70.0,8.0 pos2=-20.0,-70.0,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-17.5,-70.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=67.5,-70.0,8.0 pos2=-17.5,-70.0,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-15.0,-70.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=70.0,-70.0,8.0 pos2=-15.0,-70.0,8.0
+
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-20.0,-72.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=65.0,-72.0,8.0 pos2=-20.0,-72.0,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-17.5,-72.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=67.5,-72.0,8.0 pos2=-17.5,-72.0,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-15.0,-72.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=70.0,-72.0,8.0 pos2=-15.0,-72.0,8.0
+
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=65.0,-67.5,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=65.0,-67.5,8.0 pos2=-20.0,-67.5,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=67.5,-67.5,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=67.5,-67.5,8.0 pos2=-17.5,-67.5,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=70.0,-67.5,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=70.0,-67.5,8.0 pos2=-15.0,-67.5,8.0
+
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=65.0,-70.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=65.0,-70.0,8.0 pos2=-20.0,-70.0,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=67.5,-70.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=67.5,-70.0,8.0 pos2=-17.5,-70.0,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=70.0,-70.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=70.0,-70.0,8.0 pos2=-15.0,-70.0,8.0
+
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=65.0,-72.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=65.0,-72.0,8.0 pos2=-20.0,-72.0,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=67.5,-72.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=67.5,-72.0,8.0 pos2=-17.5,-72.0,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=70.0,-72.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=70.0,-72.0,8.0 pos2=-15.0,-72.0,8.0
+
+
+
+
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-20.0,-67.5,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=65.0,-67.5,8.0 pos2=-20.0,-67.5,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-17.5,-67.5,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=67.5,-67.5,8.0 pos2=-17.5,-67.5,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-15.0,-67.5,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=70.0,-67.5,8.0 pos2=-15.0,-67.5,8.0
+
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-20.0,-70.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=65.0,-70.0,8.0 pos2=-20.0,-70.0,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-17.5,-70.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=67.5,-70.0,8.0 pos2=-17.5,-70.0,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-15.0,-70.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=70.0,-70.0,8.0 pos2=-15.0,-70.0,8.0
+
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-20.0,-72.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=65.0,-72.0,8.0 pos2=-20.0,-72.0,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-17.5,-72.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=67.5,-72.0,8.0 pos2=-17.5,-72.0,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-15.0,-72.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=70.0,-72.0,8.0 pos2=-15.0,-72.0,8.0
+
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=65.0,-67.5,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=65.0,-67.5,8.0 pos2=-20.0,-67.5,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=67.5,-67.5,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=67.5,-67.5,8.0 pos2=-17.5,-67.5,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=70.0,-67.5,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=70.0,-67.5,8.0 pos2=-15.0,-67.5,8.0
+
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=65.0,-70.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=65.0,-70.0,8.0 pos2=-20.0,-70.0,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=67.5,-70.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=67.5,-70.0,8.0 pos2=-17.5,-70.0,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=70.0,-70.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=70.0,-70.0,8.0 pos2=-15.0,-70.0,8.0
+
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=65.0,-72.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=65.0,-72.0,8.0 pos2=-20.0,-72.0,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=67.5,-72.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=67.5,-72.0,8.0 pos2=-17.5,-72.0,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=70.0,-72.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=70.0,-72.0,8.0 pos2=-15.0,-72.0,8.0
+
+
+
+
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-20.0,-67.5,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=65.0,-67.5,8.0 pos2=-20.0,-67.5,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-17.5,-67.5,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=67.5,-67.5,8.0 pos2=-17.5,-67.5,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-15.0,-67.5,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=70.0,-67.5,8.0 pos2=-15.0,-67.5,8.0
+
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-20.0,-70.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=65.0,-70.0,8.0 pos2=-20.0,-70.0,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-17.5,-70.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=67.5,-70.0,8.0 pos2=-17.5,-70.0,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-15.0,-70.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=70.0,-70.0,8.0 pos2=-15.0,-70.0,8.0
+
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-20.0,-72.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=65.0,-72.0,8.0 pos2=-20.0,-72.0,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-17.5,-72.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=67.5,-72.0,8.0 pos2=-17.5,-72.0,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-15.0,-72.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=70.0,-72.0,8.0 pos2=-15.0,-72.0,8.0
+
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=65.0,-67.5,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=65.0,-67.5,8.0 pos2=-20.0,-67.5,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=67.5,-67.5,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=67.5,-67.5,8.0 pos2=-17.5,-67.5,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=70.0,-67.5,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=70.0,-67.5,8.0 pos2=-15.0,-67.5,8.0
+
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=65.0,-70.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=65.0,-70.0,8.0 pos2=-20.0,-70.0,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=67.5,-70.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=67.5,-70.0,8.0 pos2=-17.5,-70.0,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=70.0,-70.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=70.0,-70.0,8.0 pos2=-15.0,-70.0,8.0
+
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=65.0,-72.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=65.0,-72.0,8.0 pos2=-20.0,-72.0,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=67.5,-72.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=67.5,-72.0,8.0 pos2=-17.5,-72.0,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=70.0,-72.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=70.0,-72.0,8.0 pos2=-15.0,-72.0,8.0
+
+
+
+
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-20.0,-67.5,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=65.0,-67.5,8.0 pos2=-20.0,-67.5,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-17.5,-67.5,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=67.5,-67.5,8.0 pos2=-17.5,-67.5,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-15.0,-67.5,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=70.0,-67.5,8.0 pos2=-15.0,-67.5,8.0
+
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-20.0,-70.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=65.0,-70.0,8.0 pos2=-20.0,-70.0,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-17.5,-70.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=67.5,-70.0,8.0 pos2=-17.5,-70.0,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-15.0,-70.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=70.0,-70.0,8.0 pos2=-15.0,-70.0,8.0
+
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-20.0,-72.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=65.0,-72.0,8.0 pos2=-20.0,-72.0,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-17.5,-72.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=67.5,-72.0,8.0 pos2=-17.5,-72.0,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-15.0,-72.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=70.0,-72.0,8.0 pos2=-15.0,-72.0,8.0
+
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=65.0,-67.5,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=65.0,-67.5,8.0 pos2=-20.0,-67.5,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=67.5,-67.5,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=67.5,-67.5,8.0 pos2=-17.5,-67.5,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=70.0,-67.5,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=70.0,-67.5,8.0 pos2=-15.0,-67.5,8.0
+
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=65.0,-70.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=65.0,-70.0,8.0 pos2=-20.0,-70.0,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=67.5,-70.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=67.5,-70.0,8.0 pos2=-17.5,-70.0,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=70.0,-70.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=70.0,-70.0,8.0 pos2=-15.0,-70.0,8.0
+
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=65.0,-72.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=65.0,-72.0,8.0 pos2=-20.0,-72.0,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=67.5,-72.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=67.5,-72.0,8.0 pos2=-17.5,-72.0,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=70.0,-72.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=70.0,-72.0,8.0 pos2=-15.0,-72.0,8.0
+
+
+
+
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-20.0,-67.5,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=65.0,-67.5,8.0 pos2=-20.0,-67.5,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-17.5,-67.5,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=67.5,-67.5,8.0 pos2=-17.5,-67.5,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-15.0,-67.5,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=70.0,-67.5,8.0 pos2=-15.0,-67.5,8.0
+
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-20.0,-70.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=65.0,-70.0,8.0 pos2=-20.0,-70.0,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-17.5,-70.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=67.5,-70.0,8.0 pos2=-17.5,-70.0,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-15.0,-70.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=70.0,-70.0,8.0 pos2=-15.0,-70.0,8.0
+
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-20.0,-72.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=65.0,-72.0,8.0 pos2=-20.0,-72.0,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-17.5,-72.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=67.5,-72.0,8.0 pos2=-17.5,-72.0,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-15.0,-72.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=70.0,-72.0,8.0 pos2=-15.0,-72.0,8.0
+
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=65.0,-67.5,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=65.0,-67.5,8.0 pos2=-20.0,-67.5,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=67.5,-67.5,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=67.5,-67.5,8.0 pos2=-17.5,-67.5,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=70.0,-67.5,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=70.0,-67.5,8.0 pos2=-15.0,-67.5,8.0
+
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=65.0,-70.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=65.0,-70.0,8.0 pos2=-20.0,-70.0,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=67.5,-70.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=67.5,-70.0,8.0 pos2=-17.5,-70.0,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=70.0,-70.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=70.0,-70.0,8.0 pos2=-15.0,-70.0,8.0
+
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=65.0,-72.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=65.0,-72.0,8.0 pos2=-20.0,-72.0,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=67.5,-72.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=67.5,-72.0,8.0 pos2=-17.5,-72.0,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=70.0,-72.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=70.0,-72.0,8.0 pos2=-15.0,-72.0,8.0
+
+
+
+
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-20.0,-67.5,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=65.0,-67.5,8.0 pos2=-20.0,-67.5,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-17.5,-67.5,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=67.5,-67.5,8.0 pos2=-17.5,-67.5,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-15.0,-67.5,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=70.0,-67.5,8.0 pos2=-15.0,-67.5,8.0
+
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-20.0,-70.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=65.0,-70.0,8.0 pos2=-20.0,-70.0,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-17.5,-70.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=67.5,-70.0,8.0 pos2=-17.5,-70.0,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-15.0,-70.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=70.0,-70.0,8.0 pos2=-15.0,-70.0,8.0
+
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-20.0,-72.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=65.0,-72.0,8.0 pos2=-20.0,-72.0,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-17.5,-72.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=67.5,-72.0,8.0 pos2=-17.5,-72.0,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-15.0,-72.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=70.0,-72.0,8.0 pos2=-15.0,-72.0,8.0
+
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=65.0,-67.5,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=65.0,-67.5,8.0 pos2=-20.0,-67.5,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=67.5,-67.5,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=67.5,-67.5,8.0 pos2=-17.5,-67.5,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=70.0,-67.5,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=70.0,-67.5,8.0 pos2=-15.0,-67.5,8.0
+
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=65.0,-70.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=65.0,-70.0,8.0 pos2=-20.0,-70.0,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=67.5,-70.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=67.5,-70.0,8.0 pos2=-17.5,-70.0,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=70.0,-70.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=70.0,-70.0,8.0 pos2=-15.0,-70.0,8.0
+
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=65.0,-72.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=65.0,-72.0,8.0 pos2=-20.0,-72.0,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=67.5,-72.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=67.5,-72.0,8.0 pos2=-17.5,-72.0,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=70.0,-72.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=70.0,-72.0,8.0 pos2=-15.0,-72.0,8.0
+
+
+
+
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-20.0,-67.5,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=65.0,-67.5,8.0 pos2=-20.0,-67.5,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-17.5,-67.5,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=67.5,-67.5,8.0 pos2=-17.5,-67.5,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-15.0,-67.5,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=70.0,-67.5,8.0 pos2=-15.0,-67.5,8.0
+
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-20.0,-70.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=65.0,-70.0,8.0 pos2=-20.0,-70.0,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-17.5,-70.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=67.5,-70.0,8.0 pos2=-17.5,-70.0,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-15.0,-70.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=70.0,-70.0,8.0 pos2=-15.0,-70.0,8.0
+
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-20.0,-72.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=65.0,-72.0,8.0 pos2=-20.0,-72.0,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-17.5,-72.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=67.5,-72.0,8.0 pos2=-17.5,-72.0,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-15.0,-72.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=70.0,-72.0,8.0 pos2=-15.0,-72.0,8.0
+
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=65.0,-67.5,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=65.0,-67.5,8.0 pos2=-20.0,-67.5,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=67.5,-67.5,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=67.5,-67.5,8.0 pos2=-17.5,-67.5,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=70.0,-67.5,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=70.0,-67.5,8.0 pos2=-15.0,-67.5,8.0
+
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=65.0,-70.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=65.0,-70.0,8.0 pos2=-20.0,-70.0,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=67.5,-70.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=67.5,-70.0,8.0 pos2=-17.5,-70.0,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=70.0,-70.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=70.0,-70.0,8.0 pos2=-15.0,-70.0,8.0
+
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=65.0,-72.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=65.0,-72.0,8.0 pos2=-20.0,-72.0,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=67.5,-72.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=67.5,-72.0,8.0 pos2=-17.5,-72.0,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=70.0,-72.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=70.0,-72.0,8.0 pos2=-15.0,-72.0,8.0
+
+
+
+
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-20.0,-67.5,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=65.0,-67.5,8.0 pos2=-20.0,-67.5,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-17.5,-67.5,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=67.5,-67.5,8.0 pos2=-17.5,-67.5,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-15.0,-67.5,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=70.0,-67.5,8.0 pos2=-15.0,-67.5,8.0
+
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-20.0,-70.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=65.0,-70.0,8.0 pos2=-20.0,-70.0,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-17.5,-70.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=67.5,-70.0,8.0 pos2=-17.5,-70.0,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-15.0,-70.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=70.0,-70.0,8.0 pos2=-15.0,-70.0,8.0
+
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-20.0,-72.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=65.0,-72.0,8.0 pos2=-20.0,-72.0,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-17.5,-72.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=67.5,-72.0,8.0 pos2=-17.5,-72.0,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-15.0,-72.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=70.0,-72.0,8.0 pos2=-15.0,-72.0,8.0
+
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=65.0,-67.5,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=65.0,-67.5,8.0 pos2=-20.0,-67.5,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=67.5,-67.5,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=67.5,-67.5,8.0 pos2=-17.5,-67.5,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=70.0,-67.5,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=70.0,-67.5,8.0 pos2=-15.0,-67.5,8.0
+
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=65.0,-70.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=65.0,-70.0,8.0 pos2=-20.0,-70.0,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=67.5,-70.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=67.5,-70.0,8.0 pos2=-17.5,-70.0,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=70.0,-70.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=70.0,-70.0,8.0 pos2=-15.0,-70.0,8.0
+
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=65.0,-72.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=65.0,-72.0,8.0 pos2=-20.0,-72.0,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=67.5,-72.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=67.5,-72.0,8.0 pos2=-17.5,-72.0,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=70.0,-72.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=70.0,-72.0,8.0 pos2=-15.0,-72.0,8.0
+
+
+
+
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-20.0,-67.5,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=65.0,-67.5,8.0 pos2=-20.0,-67.5,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-17.5,-67.5,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=67.5,-67.5,8.0 pos2=-17.5,-67.5,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-15.0,-67.5,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=70.0,-67.5,8.0 pos2=-15.0,-67.5,8.0
+
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-20.0,-70.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=65.0,-70.0,8.0 pos2=-20.0,-70.0,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-17.5,-70.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=67.5,-70.0,8.0 pos2=-17.5,-70.0,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-15.0,-70.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=70.0,-70.0,8.0 pos2=-15.0,-70.0,8.0
+
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-20.0,-72.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=65.0,-72.0,8.0 pos2=-20.0,-72.0,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-17.5,-72.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=67.5,-72.0,8.0 pos2=-17.5,-72.0,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-15.0,-72.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=70.0,-72.0,8.0 pos2=-15.0,-72.0,8.0
+
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=65.0,-67.5,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=65.0,-67.5,8.0 pos2=-20.0,-67.5,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=67.5,-67.5,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=67.5,-67.5,8.0 pos2=-17.5,-67.5,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=70.0,-67.5,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=70.0,-67.5,8.0 pos2=-15.0,-67.5,8.0
+
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=65.0,-70.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=65.0,-70.0,8.0 pos2=-20.0,-70.0,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=67.5,-70.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=67.5,-70.0,8.0 pos2=-17.5,-70.0,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=70.0,-70.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=70.0,-70.0,8.0 pos2=-15.0,-70.0,8.0
+
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=65.0,-72.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=65.0,-72.0,8.0 pos2=-20.0,-72.0,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=67.5,-72.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=67.5,-72.0,8.0 pos2=-17.5,-72.0,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=70.0,-72.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=70.0,-72.0,8.0 pos2=-15.0,-72.0,8.0
+
+
+
+
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-20.0,-67.5,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=65.0,-67.5,8.0 pos2=-20.0,-67.5,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-17.5,-67.5,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=67.5,-67.5,8.0 pos2=-17.5,-67.5,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-15.0,-67.5,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=70.0,-67.5,8.0 pos2=-15.0,-67.5,8.0
+
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-20.0,-70.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=65.0,-70.0,8.0 pos2=-20.0,-70.0,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-17.5,-70.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=67.5,-70.0,8.0 pos2=-17.5,-70.0,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-15.0,-70.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=70.0,-70.0,8.0 pos2=-15.0,-70.0,8.0
+
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-20.0,-72.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=65.0,-72.0,8.0 pos2=-20.0,-72.0,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-17.5,-72.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=67.5,-72.0,8.0 pos2=-17.5,-72.0,8.0
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=4.000000 pos=-15.0,-72.0,8.0 enableSoftContactSolver=true enableBypassContactOverTime=true  avoidanceAngleSpan=70 colliderCollectorRadius=5 colliderCollectorFramesBetweenUpdates=20 minimalTimeToCollision=1.5 enableStop=false
+GameBotSetRoute count=1 posCount=2 pos1=70.0,-72.0,8.0 pos2=-15.0,-72.0,8.0
+
+LabSetCameraAttitude eyePos=28.0117,-69.3979,72.5435 yaw=1.56625 pitch=-1.5608
+

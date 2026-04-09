@@ -1,0 +1,97 @@
+<?xml version="1.0" ?>
+<ProjectInfo version="2" />
+<pdgName>allowedmaterials</pdgName>
+<outputDir>
+	<baseDir>../../..</baseDir>
+	<relativeDir>NavigationLab.output/examples/restrictedareas/allowedmaterials</relativeDir>
+</outputDir>
+<config>
+    <entityHeight>3.000000</entityHeight>
+    <entityRadius>0.470000</entityRadius>
+    <stepMax>0.590000</stepMax>
+    <slopeMax>46.000000</slopeMax>
+    <rasterPrecision>0.100000</rasterPrecision>
+    <cellSize>10.000000</cellSize>
+    <altitudeTolerance>0.500000</altitudeTolerance>
+    <backFaceTrianglesWalkable>1</backFaceTrianglesWalkable>
+    <CoordSystem>
+        <OneMeter>1.000000</OneMeter>
+        <X>CLIENT_X</X>
+        <Y>CLIENT_Y</Y>
+        <Z>CLIENT_Z</Z>
+    </CoordSystem>
+    <altitudeToleranceSamplingStep>0.300000</altitudeToleranceSamplingStep>
+    <noiseReductionSurface>1.000000</noiseReductionSurface>
+    <minConnectedSurface>10.000000</minConnectedSurface>
+    <navTagMinPixelArea>6</navTagMinPixelArea>
+    <navTagRasterMergeTolerance>0.100000</navTagRasterMergeTolerance>
+    <navmeshEarClippingTolerance>0.000000</navmeshEarClippingTolerance>
+    <navRasterDistanceMapMetric>Manhattan</navRasterDistanceMapMetric>
+    <useMultiCore>TRUE</useMultiCore>
+    <doEnableLimitedMemoryMode>FALSE</doEnableLimitedMemoryMode>
+    <outputFilesAreLittleEndian>TRUE</outputFilesAreLittleEndian>
+    <IntermediateData>
+        <Write>FALSE</Write>
+    </IntermediateData>
+    <visualDebug-use>FALSE</visualDebug-use>
+    <visualDebug-file></visualDebug-file>
+</config>
+<sector>
+	<name></name>
+	<guid>2B39A9A6-CA26-B24D-866E-2645B5BEFAD7</guid>
+	<doBuild>TRUE</doBuild>
+	<geometries>
+		<geometry>
+			<filepath>../../obj/Village_250x200_1m_noflip.obj</filepath>
+			<counterClockWise>TRUE</counterClockWise>
+		</geometry>
+	</geometries>
+	<seedpoints>
+		<seedpoint>
+			<X>-6.828861</X>
+			<Y>-43.847008</Y>
+			<Z>23.503405</Z>
+		</seedpoint>
+		<seedpoint>
+			<X>36.127914</X>
+			<Y>-30.752518</Y>
+			<Z>14.731705</Z>
+		</seedpoint>
+		<seedpoint>
+			<X>2.547021</X>
+			<Y>-4.600140</Y>
+			<Z>22.297806</Z>
+		</seedpoint>
+		<seedpoint>
+			<X>63.571007</X>
+			<Y>-27.830313</Y>
+			<Z>21.481796</Z>
+		</seedpoint>
+		<seedpoint>
+			<X>64.986046</X>
+			<Y>-10.764076</Y>
+			<Z>28.326996</Z>
+		</seedpoint>
+		<seedpoint>
+			<X>108.270393</X>
+			<Y>-71.274681</Y>
+			<Z>16.709902</Z>
+		</seedpoint>
+		<seedpoint>
+			<X>113.689987</X>
+			<Y>-61.994961</Y>
+			<Z>19.567099</Z>
+		</seedpoint>
+		<seedpoint>
+			<X>102.748993</X>
+			<Y>-89.874649</Y>
+			<Z>24.362499</Z>
+		</seedpoint>
+		    <seedpoint>
+			<X>111.669296</X>
+			<Y>-88.821037</Y>
+			<Z>26.417202</Z>
+		</seedpoint>
+	</seedpoints>
+</sector>
+

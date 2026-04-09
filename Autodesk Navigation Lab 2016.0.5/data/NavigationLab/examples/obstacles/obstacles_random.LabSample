@@ -1,0 +1,11 @@
+//Spawn all kinds of moving obstacles all accross a terrain and a character wandering.
+LabOpenFile filename=obstacles_random.NavGenProj
+LabGenerateNavGenProj navgenprojname=obstacles_random.NavGenProj
+LabHideSeedPoints
+LabHideGenerationTagVolumes
+LabHideCellBoxes
+LabSetCameraAttitude eyePos=-28.8933,-17.0514,38.2072 yaw=1.70029 pitch=-0.961589
+
+GameSpawnBot count=1 avoidance=true pos=-3,20,10.5
+GameBotSetRoute count=1 posCount=2 pos1=-3,20,10.5 pos2=-46,-8.4,8.5
+GameSpawnRandomBoxObstacles count=500 minhalfextents=0.1,0.1,0.1 maxhalfextents=2,1,0.5 localcenterrange=1,1,1 velocity=0,0,5 rotationvelocity=0,0,3.14

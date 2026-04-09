@@ -1,0 +1,7 @@
+//Loads canyon.NavGenProj
+//How to use: Click Generate
+LabOpenFile filename=canyon.NavGenProj
+LabShowSeedPoints
+LabShowGenerationTagVolumes
+LabShowCellBoxes
+LabSetCameraAttitude eyePos=-816.939,-67.5244,819.472 yaw=0.0474074 pitch=-0.866887

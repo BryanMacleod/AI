@@ -1,0 +1,16 @@
+//Load a playground configured to play with physics and spawn 35 bots wandering there.
+//You must activate physics in GameSpawnBoxObstacle command config (in the right pane). Then you can spawn physics-controlled BoxObstacles on the picked position using either (o) shortcut key or mouse right button contextual menu in viewport.
+LabOpenFile filename=physicsdemo_35bots.NavGenProj 
+LabGenerateNavGenProj navgenprojname=physicsdemo_35bots.NavGenProj
+LabHideSeedPoints
+LabHideGenerationTagVolumes
+LabHideCellBoxes
+LabSendAllStaticGeometry
+GameSpawnBot count=7 wander=true avoidance=true maxDesiredLinearSpeed=3.000000 pos=-72,51,7.8 minDestinationDistance=50.000000 maxDestinationDistance=150.000000
+GameSpawnBot count=7 wander=true avoidance=true maxDesiredLinearSpeed=3.000000 pos=72,64,7.8 minDestinationDistance=50.000000 maxDestinationDistance=150.000000
+GameSpawnBot count=7 wander=true avoidance=true maxDesiredLinearSpeed=3.000000 pos=-39,-37,10 minDestinationDistance=50.000000 maxDestinationDistance=150.000000
+GameSpawnBot count=7 wander=true avoidance=true maxDesiredLinearSpeed=3.000000 pos=89,-22,14.7 minDestinationDistance=50.000000 maxDestinationDistance=150.000000
+GameSpawnBot count=7 wander=true avoidance=true maxDesiredLinearSpeed=3.000000 pos=12.5,-76,7.7 minDestinationDistance=50.000000 maxDestinationDistance=150.000000
+LabSetCameraAttitude eyePos=25.2522,-49.622,48.758 yaw=0.999264 pitch=-0.970872
+LabShowActionGroup groupname="physics"
+LabTriggerAction name="PhysicsSquareBox"

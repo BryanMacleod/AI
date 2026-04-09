@@ -1,0 +1,9 @@
+//Village - 1000 Bots - Cosmetic(Forgiving) Avoidance
+LabOpenFile filename=Village-1000-HalfAvoid.NavGenProj 
+LabGenerateNavGenProj navgenprojname=Village-1000-HalfAvoid.NavGenProj
+LabHideSeedPoints
+LabHideGenerationTagVolumes
+LabHideCellBoxes
+GameSetDesiredFPS fps=30
+GameSpawnRandomBots count=1000 enableStop=false enableSlowingDown=false
+LabSetCameraAttitude eyePos=-38.6676,-18.7741,18.6345 yaw=-0.507099 pitch=-0.068584

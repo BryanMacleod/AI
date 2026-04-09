@@ -1,0 +1,65 @@
+// Setup a basic playground to show path finding to a cover point.
+// This sample uses a TriangleCostMap and the corresponding TraverseLogic API to be able to
+// assign a cost per triangle. This cost is read during pathFinding to prevent bots from going
+// through the line of fire of the player.
+// The way the costs are computed is relatively naive since we perform a few RayCastQuery on
+// the NavMesh from the player to identify visible triangles and we assign a cost to these 
+// triangles that reflects their distance to the player from the player’s front direction.
+// As the cost is "per triangle", we need a triangulation dense enough, that is why the NavData
+// is genererated with CellSize = 5m.
+// CovertPoints are inserted in the NavData as NavGraphvertex, and we use a
+// BestGraphVertexPathFinderQuery wich enables us to discover on the fly these coverPoints and to
+// decide which one will be the destination of the Path.
+
+
+LabOpenFile filename=CoverPoints.NavGenProj
+LabGenerateNavGenProj navgenprojname=CoverPoints.NavGenProj
+labsetcameraattitude eyePos=0.0,-40.0,20.0 yaw=1.56382 pitch=-0.6
+LabHideSeedPoints
+LabHideGenerationTagVolumes
+LabHideCellBoxes
+
+GameSpawnBoxObstacle integrateInNavmesh=true activateCoverPoints=true pos=5.0,2.0,0.5 halfExtents=2.0,0.5,0.5 yawPitchRoll=0.0,0.0,0.0
+GameSpawnBoxObstacle integrateInNavmesh=true activateCoverPoints=true pos=-2.0,5.0,0.5 halfExtents=2.0,0.5,0.5 yawPitchRoll=90.0,0.0,0.0
+GameSpawnBoxObstacle integrateInNavmesh=true activateCoverPoints=true pos=-5.0,-2.0,0.5 halfExtents=2.0,0.5,0.5 yawPitchRoll=0.0,0.0,0.0
+GameSpawnBoxObstacle integrateInNavmesh=true activateCoverPoints=true pos=2.0,-5.0,0.5 halfExtents=2.0,0.5,0.5 yawPitchRoll=90.0,0.0,0.0
+
+GameSpawnBoxObstacle integrateInNavmesh=true activateCoverPoints=true pos=5.0,10.0,0.5 halfExtents=3.0,0.5,0.5 yawPitchRoll=-45.0,0.0,0.0
+GameSpawnBoxObstacle integrateInNavmesh=true activateCoverPoints=true pos=-10.0,5.0,0.5 halfExtents=3.0,0.5,0.5 yawPitchRoll=45.0,0.0,0.0
+GameSpawnBoxObstacle integrateInNavmesh=true activateCoverPoints=true pos=-5.0,-10.0,0.5 halfExtents=3.0,0.5,0.5 yawPitchRoll=-45.0,0.0,0.0
+GameSpawnBoxObstacle integrateInNavmesh=true activateCoverPoints=true pos=10.0,-5.0,0.5 halfExtents=3.0,0.5,0.5 yawPitchRoll=45.0,0.0,0.0
+
+GameSpawnBoxObstacle integrateInNavmesh=true activateCoverPoints=true pos=5.0,25.0,0.5 halfExtents=5.0,0.5,0.5 yawPitchRoll=10.0,0.0,0.0
+GameSpawnBoxObstacle integrateInNavmesh=true activateCoverPoints=true pos=-25.0,5.0,0.5 halfExtents=5.0,0.5,0.5 yawPitchRoll=80.0,0.0,0.0
+GameSpawnBoxObstacle integrateInNavmesh=true activateCoverPoints=true pos=-5.0,-25.0,0.5 halfExtents=5.0,0.5,0.5 yawPitchRoll=-10.0,0.0,0.0
+GameSpawnBoxObstacle integrateInNavmesh=true activateCoverPoints=true pos=25.0,-5.0,0.5 halfExtents=5.0,0.5,0.5 yawPitchRoll=-80.0,0.0,0.0
+
+GameSpawnBoxObstacle integrateInNavmesh=true activateCoverPoints=true pos=20.0,15.0,0.5 halfExtents=5.0,0.5,0.5 yawPitchRoll=-40.0,0.0,0.0
+GameSpawnBoxObstacle integrateInNavmesh=true activateCoverPoints=true pos=-15.0,20.0,0.5 halfExtents=5.0,0.5,0.5 yawPitchRoll=40.0,0.0,0.0
+GameSpawnBoxObstacle integrateInNavmesh=true activateCoverPoints=true pos=-20.0,-15.0,0.5 halfExtents=5.0,0.5,0.5 yawPitchRoll=-50.0,0.0,0.0
+GameSpawnBoxObstacle integrateInNavmesh=true activateCoverPoints=true pos=15.0,-20.0,0.5 halfExtents=5.0,0.5,0.5 yawPitchRoll=50.0,0.0,0.0
+
+GameSpawnBot pos=0,0,0 maxDesiredLinearSpeed=4
+GameBotSetRoute assignToLastIdle=true posCount=3 pos1=-14,-10,0 pos2=-4,15,0 pos3=10,-10,0
+GameAssignUpdateCoverPointDataBehavior assignToLastIdle=true
+GameComputeCoverPointData isOccupied=0.000000 pos=0,0,0 minTargetDist=10.000000 maxTargetDist=25.000000
+
+GameSpawnBot pos=20,20,0 maxDesiredLinearSpeed=7
+GameAssignGoToBestCoverPointBehavior assignToLastIdle=true
+GameSpawnBot pos=25,20,0 maxDesiredLinearSpeed=7
+GameAssignGoToBestCoverPointBehavior assignToLastIdle=true
+
+GameSpawnBot pos=-20,20,0 maxDesiredLinearSpeed=7
+GameAssignGoToBestCoverPointBehavior assignToLastIdle=true
+GameSpawnBot pos=-25,20,0 maxDesiredLinearSpeed=7
+GameAssignGoToBestCoverPointBehavior assignToLastIdle=true
+
+GameSpawnBot pos=20,-20,0 maxDesiredLinearSpeed=7
+GameAssignGoToBestCoverPointBehavior assignToLastIdle=true
+GameSpawnBot pos=25,-20,0 maxDesiredLinearSpeed=7
+GameAssignGoToBestCoverPointBehavior assignToLastIdle=true
+
+GameSpawnBot pos=-20,-20,0 maxDesiredLinearSpeed=7
+GameAssignGoToBestCoverPointBehavior assignToLastIdle=true
+GameSpawnBot pos=-25,-20,0 maxDesiredLinearSpeed=7
+GameAssignGoToBestCoverPointBehavior assignToLastIdle=true

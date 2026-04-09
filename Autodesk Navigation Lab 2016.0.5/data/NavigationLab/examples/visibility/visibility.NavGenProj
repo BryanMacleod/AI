@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+<database>
+    <databaseIndex>0</databaseIndex>
+</database>
+<outputDir>
+    <baseDir>../../..</baseDir>
+	<relativeDir>NavigationLab.output/examples/visibility</relativeDir>
+</outputDir>
+<config>
+    <entityHeight>1.800000</entityHeight>
+    <entityRadius>0.300000</entityRadius>
+    <stepMax>0.100000</stepMax>
+    <slopeMax>40.000000</slopeMax>
+    <CoordSystem>
+        <OneMeter>1.000000</OneMeter>
+        <X>CLIENT_X</X>
+        <Y>CLIENT_Y</Y>
+        <Z>CLIENT_Z</Z>
+    </CoordSystem>
+</config>
+<sector>
+    <name>TerrainRing</name>
+    <guid>C037CF7A-2BFF-4249-A935-2CC39878B7A2</guid>
+    <doBuild>TRUE</doBuild>
+    <doSaveClientInput>TRUE</doSaveClientInput>
+	<doGenerateColData>TRUE</doGenerateColData>
+    <geometries>
+	    <geometry>
+            <filepath>../../obj/TerrainRing.HeightField</filepath>
+		</geometry>
+        <geometry>
+            <filepath>../../obj/PlacedVillage.IndexedMesh</filepath>
+        </geometry>
+    </geometries>
+    <seedpoints>
+        <seedpoint>
+            <X>410.026154</X>
+            <Y>-161.335205</Y>
+            <Z>-54.985222</Z>
+        </seedpoint>
+    </seedpoints>
+</sector>

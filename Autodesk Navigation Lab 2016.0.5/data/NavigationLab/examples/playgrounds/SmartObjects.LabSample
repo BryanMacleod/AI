@@ -1,0 +1,21 @@
+//Multiple SmartObjects in the same scene
+LabOpenFile filename=SmartObjects.NavGenProj 
+LabGenerateNavGenProj navgenprojname=SmartObjects.NavGenProj
+LabHideSeedPoints
+LabHideGenerationTagVolumes
+LabHideCellBoxes
+GameSpawnLadder pos1=103.92,-73.66,16.71 pos2=101.76,-73.59,7.84 width=2.0 depth=0.5
+GameSpawnJump pos1=105.55,-69.17,16.71 pos2=101.12,-69.04,7.85
+GameSpawnPlank pos1=111.28,-64.80,19.56 pos2=109.49,-66.74,16.71
+GameSpawnPlank pos1=113.40,-79.07,24.36 pos2=113.30,-76.42,16.71
+GameSpawnLadder pos1=104.83,-83.34,24.36 pos2=104.83,-81.15,16.71 width=2.0 depth=0.5
+GameSpawnJump pos1=105.22,-61.79,16.71 pos2=98.18,-62.51,8.19
+GameSpawnLadder pos1=110.74,-59.90,19.56 pos2=109.24,-59.93,16.71 width=2.0 depth=0.5
+GameSpawnJump pos1=117.21,-65.10,19.56 pos2=116.67,-67.47,16.71
+GameSpawnLadder pos1=112.19,-84.62,26.41 pos2=112.22,-83.23,24.36 width=2.0 depth=0.5
+GameSpawnPlank pos1=110.99,-90.63,26.41 pos2=109.41,-90.66,24.36
+GameSpawnLadder pos1=95.71,-84.33,24.36 pos2=93.31,-84.27,7.84 width=2.0 depth=0.5
+GameSpawnLava posCount=5 pos1=91.23,-75.43,7.78 pos2=95.48,-70.15,7.95 pos3=92.55,-67.58,7.94 pos4=86.86,-71.21,7.73 pos5=90.01,-72.44,7.77 posAltMin=7.42 posAltMax=8.96
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=3.0 pos=91.87,-71.80,7.83 minDestinationDistance=20.0 maxDestinationDistance=40.0
+GameBotSetRoute count=1 posCount=3  pos1=109.17,-72.85,16.71 pos2=103.33,-87.80,24.36 pos3=91.24,-68.73,7.89 
+LabSetCameraAttitude eyePos=68.5837,-48.6753,43.6682 yaw=-0.711159 pitch=-0.558973

@@ -1,0 +1,7 @@
+//Loads opencastle.NavGenProj
+//How to use: Click Generate
+LabOpenFile filename=castle.NavGenProj
+LabShowSeedPoints
+LabShowGenerationTagVolumes
+LabShowCellBoxes
+LabSetCameraAttitude eyePos=-54.5024,-163.102,201.761 yaw=1.23188 pitch=-0.87824

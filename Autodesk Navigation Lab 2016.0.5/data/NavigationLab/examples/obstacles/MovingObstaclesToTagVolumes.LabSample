@@ -1,0 +1,38 @@
+//Show moving obstacles that are slowing down and finally integrated into the dynamic NavMesh as TagVolumes.
+//Show also how the bots avoids the obstacles regardless which internal representation is used.
+LabOpenFile filename=MovingObstaclesToTagVolumes.NavGenProj
+LabGenerateNavGenProj navgenprojname=MovingObstaclesToTagVolumes.NavGenProj
+LabHideSeedPoints
+LabHideGenerationTagVolumes
+LabHideCellBoxes
+
+LabSetCameraAttitude eyePos=25.2693,-34.1709,66.1852 yaw=1.56382 pitch=-1.42816
+
+GameSpawnBot count=1 avoidance=true pos=20,-24,14.7 enableSlowingDown=false
+GameBotSetRoute count=1 posCount=2 pos1=20,-24,14.7 pos2=0,-24,14.7
+GameSpawnBoxObstacle count=1 pos=0,-20,15 target=0,-20,15 halfextents=7.5,0.5,0.5 velocity=10,0,0 integrateInNavmesh=true yawpitchroll=10,0,0 dampingFactor=1 
+GameSpawnBoxObstacle count=1 pos=0,-24,15 target=0,-24,15 halfextents=7.5,0.5,0.5 velocity=10,0,0 integrateInNavmesh=true yawpitchroll=10,0,0 dampingFactor=1
+GameSpawnBoxObstacle count=1 pos=0,-28,15 target=0,-28,15 halfextents=7.5,0.5,0.5 velocity=10,0,0 integrateInNavmesh=true yawpitchroll=10,0,0 dampingFactor=1
+
+GameSpawnBot count=1 avoidance=true pos=45,-25,14.7 enableSlowingDown=false
+GameBotSetRoute count=1 posCount=2 pos1=45,-25,14.7 pos2=25,-25,14.7
+GameSpawnBoxObstacle count=1 pos=25,-20,15 target=25,-20,15 halfextents=5,0.5,0.5 velocity=10,0,0 integrateInNavmesh=true yawpitchroll=5,0,0 dampingFactor=1
+GameSpawnBoxObstacle count=1 pos=25,-26,15 target=25,-26,15 halfextents=5,0.5,0.5 velocity=10,0,0 integrateInNavmesh=true yawpitchroll=-30,0,0 dampingFactor=1
+
+GameSpawnBot count=1 avoidance=true pos=45,-35,14.7 enableSlowingDown=false
+GameBotSetRoute count=1 posCount=2 pos1=45,-35,14.7 pos2=25,-35,14.7
+GameSpawnCylinderObstacle count=1 pos=20,-29,15 radius=0.5 height=1 velocity=10,0,0 integrateInNavmesh=true dampingFactor=1
+GameSpawnCylinderObstacle count=1 pos=20,-33,15 radius=0.5 height=1 velocity=10,0,0 integrateInNavmesh=true dampingFactor=1
+GameSpawnCylinderObstacle count=1 pos=20,-37,15 radius=0.5 height=1 velocity=10,0,0 integrateInNavmesh=true dampingFactor=1
+GameSpawnCylinderObstacle count=1 pos=23,-30,15 radius=0.5 height=1 velocity=10,0,0 integrateInNavmesh=true dampingFactor=1
+GameSpawnCylinderObstacle count=1 pos=23,-34,15 radius=0.5 height=1 velocity=10,0,0 integrateInNavmesh=true dampingFactor=1
+GameSpawnCylinderObstacle count=1 pos=23,-38,15 radius=0.5 height=1 velocity=10,0,0 integrateInNavmesh=true dampingFactor=1
+GameSpawnCylinderObstacle count=1 pos=26,-31,15 radius=0.5 height=1 velocity=10,0,0 integrateInNavmesh=true dampingFactor=1
+GameSpawnCylinderObstacle count=1 pos=26,-35,15 radius=0.5 height=1 velocity=10,0,0 integrateInNavmesh=true dampingFactor=1
+GameSpawnCylinderObstacle count=1 pos=26,-39,15 radius=0.5 height=1 velocity=10,0,0 integrateInNavmesh=true dampingFactor=1
+GameSpawnCylinderObstacle count=1 pos=29,-32,15 radius=0.5 height=1 velocity=10,0,0 integrateInNavmesh=true dampingFactor=1
+GameSpawnCylinderObstacle count=1 pos=29,-36,15 radius=0.5 height=1 velocity=10,0,0 integrateInNavmesh=true dampingFactor=1
+GameSpawnCylinderObstacle count=1 pos=29,-40,15 radius=0.5 height=1 velocity=10,0,0 integrateInNavmesh=true dampingFactor=1
+GameSpawnCylinderObstacle count=1 pos=32,-33,15 radius=0.5 height=1 velocity=10,0,0 integrateInNavmesh=true dampingFactor=1
+GameSpawnCylinderObstacle count=1 pos=32,-37,15 radius=0.5 height=1 velocity=10,0,0 integrateInNavmesh=true dampingFactor=1
+GameSpawnCylinderObstacle count=1 pos=32,-41,15 radius=0.5 height=1 velocity=10,0,0 integrateInNavmesh=true dampingFactor=1

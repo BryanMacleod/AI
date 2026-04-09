@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+<outputDir>
+	<baseDir>../../..</baseDir>
+	<relativeDir>NavigationLab.output/examples/coverpoints</relativeDir>
+</outputDir>
+<config>
+    <entityHeight>1.800000</entityHeight>
+    <entityRadius>0.300000</entityRadius>
+    <stepMax>0.500000</stepMax>
+    <slopeMax>50.000000</slopeMax>
+    <rasterPrecision>0.100000</rasterPrecision>
+	<cellSize>5.0</cellSize>
+    <CoordSystem>
+        <OneMeter>1.000000</OneMeter>
+        <X>CLIENT_X</X>
+        <Y>CLIENT_Y</Y>
+        <Z>CLIENT_Z</Z>
+    </CoordSystem>
+</config>
+<sector>
+	<name></name>
+	<guid>3B39A9A6-CA26-B24D-866E-2645B5BEFAD5</guid>
+	<doBuild>TRUE</doBuild>
+	<geometries>
+		<geometry>
+			<filepath>../../obj/plan.obj</filepath>
+		</geometry>
+	</geometries>
+</sector>
+
+

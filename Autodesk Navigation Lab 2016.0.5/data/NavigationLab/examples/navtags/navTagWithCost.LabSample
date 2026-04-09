@@ -1,0 +1,28 @@
+// The brown area is tagged using TagVolumes with a costMultiplier of 10.
+// This means that it costs 10 times more to pathfind and go through this area than pathfinding and going through the rest of the terrain.
+// See how the bot evitates the brown area, or go through the narrowest brown passage if he has no choice.
+LabOpenFile filename=navTagWithCost.NavGenProj
+LabGenerateNavGenProj navgenprojname=navTagWithCost.NavGenProj
+
+LabHideSeedPoints
+LabHideGenerationTagVolumes
+LabHideCellBoxes
+LabSetupVisualDebugView element=TagVolume notSelected=false selected=false
+LabSetupVisualDebugView element=Bot field="Live path" notSelected=true selected=true
+GameSpawnTagVolume databaseIndex=0 navTag=0,0,0,10,-1,-1,-1,-1 posCount=4 posMaxCount=6 pos1=-100,40,0 pos2=-100,-40,0 pos3=0,-40,0 pos4=0,40,0 pos5=0.000000,0.000000,0.000000 pos6=0.000000,0.000000,0.000000 posAltMin=-0.300009 posAltMax=1.000021
+GameSpawnTagVolume databaseIndex=0 navTag=0,0,0,10,-1,-1,-1,-1 posCount=4 posMaxCount=6 pos1=-10,30,0 pos2=-10,10,0 pos3=40,-10,0 pos4=40,10,0 pos5=0.000000,0.000000,0.000000 pos6=0.000000,0.000000,0.000000 posAltMin=-0.300009 posAltMax=1.000021
+GameSpawnTagVolume databaseIndex=0 navTag=0,0,0,10,-1,-1,-1,-1 posCount=4 posMaxCount=6 pos1=30,40,0 pos2= 30,-40,0 pos3=150,-40,0 pos4=150,40,0 pos5=0.000000,0.000000,0.000000 pos6=0.000000,0.000000,0.000000 posAltMin=-0.300009 posAltMax=1.000021
+GameSpawnTagVolume databaseIndex=0 navTag=0,0,0,10,-1,-1,-1,-1 posCount=3 posMaxCount=6 pos1=36.429821,34.858723,0.000006 pos2=30.191917,93.021339,-0.000024 pos3=51.285561,29.752579,-0.000009 pos4=0.000000,0.000000,0.000000 pos5=0.000000,0.000000,0.000000 pos6=0.000000,0.000000,0.000000 posAltMin=-0.300024 posAltMax=1.000006
+GameSpawnTagVolume databaseIndex=0 navTag=0,0,0,10,-1,-1,-1,-1 posCount=3 posMaxCount=6 pos1=47.197052,118.397728,0.000006 pos2=62.077446,54.700199,-0.000009 pos3=78.057709,124.884491,0.000006 pos4=0.000000,0.000000,0.000000 pos5=0.000000,0.000000,0.000000 pos6=0.000000,0.000000,0.000000 posAltMin=-0.300009 posAltMax=1.000006
+GameSpawnTagVolume databaseIndex=0 navTag=0,0,0,10,-1,-1,-1,-1 posCount=3 posMaxCount=6 pos1=71.869431,29.167030,0.000006 pos2=89.285812,93.173538,-0.000024 pos3=88.803543,25.417767,0.000006 pos4=0.000000,0.000000,0.000000 pos5=0.000000,0.000000,0.000000 pos6=0.000000,0.000000,0.000000 posAltMin=-0.300024 posAltMax=1.000006
+GameSpawnTagVolume databaseIndex=0 navTag=0,0,0,10,-1,-1,-1,-1 posCount=4 posMaxCount=6 pos1=100.216934,105.096298,0.000006 pos2=-64.301331,105.420456,0.000021 pos3=-64.912010,128.736160,-0.000009 pos4=102.138649,129.017395,0.000006 pos5=0.000000,0.000000,0.000000 pos6=0.000000,0.000000,0.000000 posAltMin=-0.300009 posAltMax=1.000021
+GameSpawnTagVolume databaseIndex=0 navTag=0,0,0,10,-1,-1,-1,-1 posCount=3 posMaxCount=6 pos1=-5.748242,-7.163250,0.000006 pos2=33.094032,-15.958315,-0.000009 pos3=-6.198050,-20.323574,0.000006 pos4=0.000000,0.000000,0.000000 pos5=0.000000,0.000000,0.000000 pos6=0.000000,0.000000,0.000000 posAltMin=-0.300009 posAltMax=1.000006
+GameSpawnTagVolume databaseIndex=0 navTag=0,0,0,10,-1,-1,-1,-1 posCount=3 posMaxCount=6 pos1=-4.614619,-31.433472,-0.000009 pos2=36.156990,-26.555620,0.000021 pos3=41.682999,-31.193558,0.000006 pos4=0.000000,0.000000,0.000000 pos5=0.000000,0.000000,0.000000 pos6=0.000000,0.000000,0.000000 posAltMin=-0.300009 posAltMax=1.000021
+GameSpawnTagVolume databaseIndex=0 navTag=0,0,0,10,-1,-1,-1,-1 posCount=6 posMaxCount=6 pos1=-9.961983,-35.304607,-0.000009 pos2=-9.052661,-43.866852,-0.000009 pos3=9.277729,-42.699013,0.000006 pos4=4.168423,-51.852654,0.000006 pos5=-15.860783,-50.691322,0.000021 pos6=-22.527611,-37.137714,-0.000009 posAltMin=-0.300009 posAltMax=1.000021
+GameSpawnTagVolume databaseIndex=0 navTag=0,0,0,10,-1,-1,-1,-1 posCount=6 posMaxCount=6 pos1=15.813101,-43.563343,0.000021 pos2=35.042095,-42.230022,-0.000024 pos3=36.642223,-35.404545,0.000006 pos4=45.345894,-35.265514,-0.000009 pos5=45.775772,-47.416412,-0.000009 pos6=19.896988,-54.411232,0.000021 posAltMin=-0.300024 posAltMax=1.000021
+GameSpawnTagVolume databaseIndex=0 navTag=0,0,0,10,-1,-1,-1,-1 posCount=4 posMaxCount=6 pos1=36.025845,60.378426,-0.000009 pos2=-19.974037,60.140331,0.000021 pos3=-22.171200,50.179382,-0.000009 pos4=40.324543,50.635292,-0.000009 pos5=0.000000,0.000000,0.000000 pos6=0.000000,0.000000,0.000000 posAltMin=-0.300009 posAltMax=1.000021
+GameSpawnTagVolume databaseIndex=0 navTag=0,0,0,10,-1,-1,-1,-1 posCount=4 posMaxCount=6 pos1=-76.775314,36.960747,-0.000009 pos2=-76.335144,47.927521,0.000006 pos3=-32.467407,81.693542,0.000006 pos4=-27.333027,26.771269,0.000021 pos5=0.000000,0.000000,0.000000 pos6=0.000000,0.000000,0.000000 posAltMin=-0.300009 posAltMax=1.000021
+
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=15 pos=-60,-50,0 minDestinationDistance=20.000000 maxDestinationDistance=200.000000
+GameBotSetRoute count=1 posCount=6 posMaxCount=6 pos1=-81.475800,50.917305,0.000021 pos2=10.8701,-57.7539,0.400006 pos3=-72.469711,-45.201126,-0.000009 pos4=98.231491,52.925690,-0.000009 pos5=-37.085312,-6.180611,0.000006 pos6=30.344200,101.371353,0.000006
+LabSetCameraAttitude eyePos=16.6955,27.7585,207.509 yaw=1.5743 pitch=-1.5608

@@ -1,0 +1,11 @@
+//city - 1500 bots - Cosmetic(Forgiving) Avoidance
+LabOpenFile filename=City-1500-HalfAvoid.NavGenProj 
+LabGenerateNavGenProj navgenprojname=City-1500-HalfAvoid.NavGenProj
+LabOpenFile filename=../../obj/city_streets.obj
+LabHideSeedPoints
+LabHideGenerationTagVolumes
+LabHideCellBoxes
+GameSetDesiredFPS fps=30
+GameSpawnRandomBots count=1500 enableStop=false enableSlowingDown=false
+GameSetQueryQueueTimeBudget budgetInMs=3 elementId=9 queueIndex=1
+LabSetCameraAttitude eyePos=-271.121,253.923,199.578 yaw=-0.855394 pitch=-0.758415

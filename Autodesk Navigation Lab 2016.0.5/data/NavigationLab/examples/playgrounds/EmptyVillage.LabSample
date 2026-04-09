@@ -1,0 +1,7 @@
+//Empty village playground.
+LabOpenFile filename=EmptyVillage.NavGenProj 
+LabGenerateNavGenProj navgenprojname=EmptyVillage.NavGenProj
+LabHideSeedPoints
+LabHideGenerationTagVolumes
+LabHideCellBoxes
+LabSetCameraAttitude eyePos=-9.02136,-57.1793,63.8831 yaw=0.821243 pitch=-0.674166

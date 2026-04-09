@@ -1,0 +1,9 @@
+// Shows how to perfom visibility checks between bots.
+LabSetCameraAttitude eyePos=-13.9373,575.765,1002.44 yaw=-1.56381 pitch=-1.10846
+LabOpenFile filename=visibility.NavGenProj 
+LabGenerateNavGenProj navgenprojname=visibility.NavGenProj
+LabHideSeedPoints
+LabHideGenerationTagVolumes
+LabHideCellBoxes
+LabSendAllColData
+GameSpawnRandomBots count=500 avoidance=false maxDesiredLinearSpeed=7.0

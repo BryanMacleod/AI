@@ -1,0 +1,13 @@
+//SmartObject that uses TagVolumes in the NavMesh
+LabOpenFile filename=Lava.NavGenProj 
+LabGenerateNavGenProj navgenprojname=Lava.NavGenProj
+GameSpawnLava posCount=3 posMaxCount=6 pos1=45.2,-31.2,14.8 pos2=37.7,-36.0,14.7 pos3=45.9,-38.8,14.7 posAltMin=14.3 posAltMax=15.9
+GameSpawnLava posCount=5 posMaxCount=6 pos1=29.8,-33.8,14.7 pos2=35.3,-29.2,14.7 pos3=39.5,-31.1,14.7 pos4=40.1,-39.2,14.7 pos5=33.2,-39.4,14.8 posAltMin=14.3 posAltMax=15.9
+GameSpawnLava posCount=5 posMaxCount=6 pos1=25.2,-29.8,14.7 pos2=30.2,-30.5,14.7 pos3=30.1,-24.1,14.7 pos4=24.7,-22.7,14.7 pos5=26.9,-27.2,14.7 posAltMin=14.3 posAltMax=15.9
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=3.0 pos=22.7,-23.5,14.7 
+GameBotSetRoute count=1 posCount=4 pos1=19.2,-22.8,14.7 pos2=41.7,-26.6,14.7 pos3=29.0,-39.1,14.8 pos4=48.0,-35.1,14.8
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=3.0 pos=50.0,-34.9,14.8
+GameBotSetRoute count=1 posCount=5 pos1=27.8,-36.7,14.8 pos2=28.1,-19.7,14.7 pos3=26.9,-36.7,14.8 pos4=39.9,-26.8,14.7 pos5=44.5,-41.2,14.7 
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=3.0 pos=34.7,-43.0,14.8
+GameBotSetRoute count=1 posCount=4 pos1=36.2,-21.6,14.7 pos2=47.6,-36.3,14.8 pos3=26.3,-38.6,14.9 pos4=27.9,-20.4,14.7
+LabSetCameraAttitude eyePos=24.043,-45.6464,37.6784 yaw=0.740081 pitch=-0.891948

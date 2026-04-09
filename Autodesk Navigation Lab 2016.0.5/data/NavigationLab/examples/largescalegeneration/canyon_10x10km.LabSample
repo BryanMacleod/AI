@@ -1,0 +1,9 @@
+// This LabSample demos the generation on a large scale terrain.
+// Here canyon is used as a base geometry that is mirrored to make a terrain of 10x10 Km.
+// The NavGenProj contains one sector for canyon with some seedpoints.
+// The sector will be mirrored (geometry, seedpoint) in the GeneratorInputProducer, so the geneation will run as if it was effectively different sectors.
+// The result of the generation will be one NavData file per sector.
+LabOpenFile filename=canyon_10x10km.NavGenProj
+LabShowSeedPoints
+LabShowGenerationTagVolumes
+LabShowCellBoxes

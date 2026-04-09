@@ -1,0 +1,56 @@
+<?xml version="1.0" ?>
+<outputDir>
+	<baseDir>../../..</baseDir>
+	<relativeDir>NavigationLab.output/examples/multidatabase</relativeDir>
+</outputDir>
+<database>
+    <databaseIndex>0</databaseIndex>
+</database>
+<config>
+    <entityHeight>3.000000</entityHeight>
+    <entityRadius>0.470000</entityRadius>
+    <stepMax>0.590000</stepMax>
+    <slopeMax>46.000000</slopeMax>
+    <rasterPrecision>0.200000</rasterPrecision>
+    <cellSize>20.000000</cellSize>
+    <altitudeTolerance>0.500000</altitudeTolerance>
+    <backFaceTrianglesWalkable>1</backFaceTrianglesWalkable>
+    <CoordSystem>
+        <OneMeter>1.000000</OneMeter>
+        <X>CLIENT_X</X>
+        <Y>CLIENT_Y</Y>
+        <Z>CLIENT_Z</Z>
+    </CoordSystem>
+    <altitudeToleranceSamplingStep>0.300000</altitudeToleranceSamplingStep>
+    <noiseReductionSurface>1.000000</noiseReductionSurface>
+    <minConnectedSurface>10.000000</minConnectedSurface>
+    <navTagMinPixelArea>6</navTagMinPixelArea>
+    <navTagRasterMergeTolerance>0.100000</navTagRasterMergeTolerance>
+    <navmeshEarClippingTolerance>0.000000</navmeshEarClippingTolerance>
+    <navRasterDistanceMapMetric>Manhattan</navRasterDistanceMapMetric>
+    <useMultiCore>TRUE</useMultiCore>
+    <outputFilesAreLittleEndian>TRUE</outputFilesAreLittleEndian>
+    <IntermediateData>
+        <Write>FALSE</Write>
+    </IntermediateData>
+    <framewatch-use>FALSE</framewatch-use>
+    <framewatch-file></framewatch-file>
+</config>
+<sector>
+	<name></name>
+	<guid>69F9E977-3F9E-0049-AA75-BD2C4ED853F2</guid>
+	<doBuild>TRUE</doBuild>
+	<geometries>
+		 <geometry>
+			<filepath>../../obj/Village_250x200_1m_noflip.obj</filepath>
+			<counterClockWise>TRUE</counterClockWise>
+		</geometry>
+	</geometries>
+</sector>
+<seedpoints>
+    <seedpoint>
+        <X>36.127914</X>
+        <Y>-30.752518</Y>
+        <Z>14.731705</Z>
+    </seedpoint>
+</seedpoints>

@@ -1,0 +1,8 @@
+//Demonstrate how to use the cellbox parameter to limit the overlap data being generated
+//How to use: Click Generate and load/unload sectors. You can also activate the view of Overlaps
+//in the preference menu - Scene viewer
+LabOpenFile filename=village_cellbox.NavGenProj
+LabShowSeedPoints
+LabShowGenerationTagVolumes
+LabShowCellBoxes
+LabSetCameraAttitude eyePos=8.50181,-1.22497,716.926 yaw=1.56842 pitch=-1.55032

@@ -1,0 +1,26 @@
+// Shows some bots using a channel trajectory to navigate along routes presenting full 3D cases.
+
+labopenfile filename=Castle.NavGenProj
+labgeneratenavgenproj navgenprojname=Castle.NavGenProj
+labhideseedpoints
+LabHideGenerationTagVolumes
+labhidecellboxes
+
+LabSetCameraAttitude eyePos=-21.2786,25.3425,52.3815 yaw=1.56243 pitch=-0.871802
+
+GameSpawnTagVolume databaseIndex=-1 navTag=1,-1,-1,-1,-1,-1,-1,-1 posCount=4 pos1=-6.6,47.9,10.6 pos2=-6,48.4,10.6 pos3=-4.9,48.1,10.6 pos4=-5.5,47,10.6 posAltMin=10.2 posAltMax=11.6
+
+// 1st bot: spiral stair case.
+gamespawnbot count=1 pos=-32,58,10.7
+gamebotsetroute count=1 posCount=2 pos1=-32,58,10.7 pos2=-33,61,23.2
+
+// 2nd bot: on castle walkway.
+gamespawnbot count=1 pos=-25,77,10.6
+gamebotsetroute count=1 posCount=2 pos1=-2.2,48.8,16.5 pos2=2.6,57.5,10.6
+
+// Configure all bots to use channel trajectory
+gamesettrajectorymode elementId=-1 trajectorymode=Channel
+gamesetbotsplinetrajectoryconfig elementId=-1 spline_length=15
+
+LabWait ms=1000
+LabSelectFirstElement elementType="bot"

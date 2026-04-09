@@ -1,0 +1,129 @@
+collision hashes from adr:
+3099813281 - none
+4119585228 - static_object
+68856046 - water
+3378251441 - hires_character
+3635140090 - vehicle
+1780429738 - dynamic_object
+3988807462 - structure
+2354930006 - force_field
+493816867 - destruction_debris                       (something with destroyed vehicle parts...)
+2300484396 - dynamic_force_field                     (only found in ForceField_RiotShield_NC.adr)           //aCUn0 (collision... no pun intended)
+
+3099813281 - OAAT hash of "none", confirming our suspicions
+not in exe... or anywhere. crap.
+ah, by guesses based on the list above, we found most.
+
+
+
+
+Filters:
+  Terrain
+  Structure
+  StaticObject
+  Player
+  Character
+  HiResCharacter
+  Vehicle
+  DynamicObject
+  Projectile
+  Water
+  InvisibleWall
+  Ghost
+  Light
+  Locator
+  Area
+  3DManipulator
+  ForceField
+  VehicleWheel
+  Target
+  SpriteParticles
+  MeshParticles
+  TurbulenceParticles
+  Group
+  ProjectileForcefield
+  ProjectileCategory1
+  ProjectileCategory2
+  ProjectileCategory3
+  ProjectileCategory4
+  ProjectileCategory5
+  ProjectileCategory6
+  ProjectileCategory7
+  ProjectileCategory8
+
+aaactually, very similar to the ones above, turns out!
+found proper exe list:
+
+terrain
+structure
+ Static Object
+static_object
+ Force Field
+force_field
+ Dynamic Force Field
+dynamic_force_field
+character
+ Hi-Res Character
+hires_character
+ Destruction Debris
+destruction_debris
+ Debris (No Vehicle Hit)
+destruction_debris_no_vehicle
+ Dynamic Object
+dynamic_object
+projectile
+water
+ Invisible Wall
+invisible_wall
+ghost
+ Client Area
+client_area
+ Zone Area
+zone_area
+ Zone Player
+zone_player
+ Zone Vehicle
+zone_vehicle
+ Zone Static
+zone_static
+ Zone Dynamic
+zone_dynamic
+ Vehicle Attachment
+vehicle_attachment
+ All Static(int)
+all_static
+ All Dynamic(int)
+all_dynamic
+ Tire Pre Filter
+tire_pre_filter
+ Tire Post Filter
+tire_post_filter
+vehicle_wheel
+ Projectile Force Field
+projectile_force_field
+
+so ones not actually found in any .adr:
+
+terrain
+character
+destruction_debris_no_vehicle
+projectile
+invisible_wall
+ghost
+client_area
+zone_area
+zone_player
+zone_vehicle
+zone_static
+zone_dynamic
+vehicle_attachment
+all_static
+all_dynamic
+tire_pre_filter
+tire_post_filter
+vehicle_wheel
+projectile_force_field
+and ones in adr, but not that list:
+none
+vehicle
+(maybe because they're already defined somewhere)

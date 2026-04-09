@@ -1,0 +1,17 @@
+//A Plank smart object that can be used by several entites at the same time requires some management
+LabProceduralGeometry outputname=PlankLabSample type=ladder platformsize=10.0 ladderheigth=3.0 ladderdepth=4
+LabGenerateNavGenProj generateIfNavDataHere=true navgenprojname=../../../NavigationLab.output/PlankLabSample/PlankLabSample.NavGenProj
+GameSpawnPlank pos1=-3,0,0 pos2=3,0,3
+GameSpawnBot count=1 avoidance=true pos=-9,0,0
+GameBotSetRoute count=1 posCount=2 pos1=-9,0,0 pos2=11,0,3
+GameSpawnBot count=1 avoidance=true pos=-7,2,0
+GameBotSetRoute count=1 posCount=2 pos1=-9,2,0 pos2=11,2,3
+GameSpawnBot count=1 avoidance=true pos=-3,-2,0
+GameBotSetRoute count=1 posCount=2 pos1=-9,-2,0 pos2=11,-2,3
+GameSpawnBot count=1 avoidance=true pos=11,0,3
+GameBotSetRoute count=1 posCount=2 pos1=11,0,3 pos2=-9,0,0
+GameSpawnBot count=1 avoidance=true pos=7,2,3
+GameBotSetRoute count=1 posCount=2 pos1=11,2,3 pos2=-9,2,0
+GameSpawnBot count=1 avoidance=true pos=3,-2,3
+GameBotSetRoute count=1 posCount=2 pos1=11,-2,3 pos2=-9,-2,0
+LabSetCameraAttitude eyePos=-8.44627,-15.3538,17.8706 yaw=1.03766 pitch=-0.841396

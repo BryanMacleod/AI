@@ -1,0 +1,33 @@
+//6 bots using channel trajectory with avoidance activated to travel through an elevator.
+
+LabProceduralGeometry outputName=ElevatorLabSample type=ladder platformSize=10.0 ladderHeigth=5.0 ladderDepth=2.0
+LabGenerateNavGenProj generateIfNavDataHere=true navGenProjName=../../../NavigationLab.output/ElevatorLabSample/ElevatorLabSample.NavGenProj
+
+LabSetCameraAttitude eyePos=0,-7.5,18.5 yaw=1.57080 pitch=-1.125
+
+GameSpawnTagVolume databaseIndex=-1 navTag=1,-1,-1,-1,-1,-1,-1,-1 posCount=3 pos1=-7.5,4,0 pos2=-4,4,0 pos3=-6,-4,0 posAltMin=-0.3 posAltMax=1
+GameSpawnTagVolume databaseIndex=-1 navTag=1,-1,-1,-1,-1,-1,-1,-1 posCount=3 pos1=8,-4,5.0 pos2=4,-4,5 pos3=6,4,5 posAltMin=4.7 posAltMax=6
+LabWait ms=2000
+
+GameSpawnElevator axisPos=0,0,0 width=3.5 length=2.0 entryA=-1.5,0,0 entryB=1.5,0,5
+
+GameSpawnBot count=1 avoidance=true pos=-9,0,0
+GameBotSetRoute count=1 assignToLastIdle=true posCount=2 pos1=-9,0,0 pos2=9,0,5
+
+GameSpawnBot count=1 avoidance=true pos=-9,-4,0
+GameBotSetRoute count=1 assignToLastIdle=true posCount=2 pos1=-9,-4,0 pos2=9,4,5
+
+GameSpawnBot count=1 avoidance=true pos=-9,4,0
+GameBotSetRoute count=1 assignToLastIdle=true posCount=2 pos1=-9,4,0 pos2=9,-4,5
+
+GameSpawnBot count=1 avoidance=true pos=9,0,5
+GameBotSetRoute count=1 assignToLastIdle=true posCount=2 pos1=9,0,5 pos2=-9,0,0
+
+GameSpawnBot count=1 avoidance=true pos=9,4,5
+GameBotSetRoute count=1 assignToLastIdle=true posCount=2 pos1=9,4,5 pos2=-9,-4,0
+
+GameSpawnBot count=1 avoidance=true pos=9,-4,5
+GameBotSetRoute count=1 assignToLastIdle=true posCount=2 pos1=9,-4,5 pos2=-9,4,0
+
+GameSetTrajectoryMode elementId=-1 trajectoryMode=Channel maxDesiredLinearSpeed=5.000000
+GameSetGameBotPathFollowConfig elementId=-1 arrivalPrecisionRadius=0.3

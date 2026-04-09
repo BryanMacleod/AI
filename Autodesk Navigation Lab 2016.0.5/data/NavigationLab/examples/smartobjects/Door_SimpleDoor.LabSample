@@ -1,0 +1,8 @@
+//This door tag the navmesh with it's ID, and then prevents the entity to pathfind through it if it is closed. To control, use the commands "[opendoor|closedoor] id=0". 
+LabProceduralGeometry outputname=NavTag_Door type=door corridorWidth=9.0 doorWidth=1 doorLength=0.5
+LabGenerateNavGenProj generateIfNavDataHere=true navgenprojname=../../../NavigationLab.output/NavTag_Door/NavTag_Door.NavGenProj
+GameSpawnDoor pos1=0,1,0 pos2=0,-1,0 depth=0.5 height=2.5 timetoopenclose=2.0 delaytoautoclose=0.0 userControl=true
+GameSpawnBot count=1 avoidance=true pos=-10,0,0
+GameBotSetRoute count=1 posCount=2 pos1=-10,0,0 pos2=10,0,0
+LabSetCameraAttitude eyePos=-11.102,9.88384,13.3697 yaw=-0.84597 pitch=-0.854197
+GameOpenAllDoors 

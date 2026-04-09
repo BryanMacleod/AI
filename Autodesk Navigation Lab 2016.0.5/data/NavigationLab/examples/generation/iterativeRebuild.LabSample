@@ -1,0 +1,15 @@
+// Cut canyon into pieces using generationParameters defined in iterativeRebuild.NavGenProj and using a CellBox for each sector with X count and Y count based on given parameters
+LabDisconnect
+LabClipObjOnGrid inputObjFile=../../obj/canyon.obj inputNavGenProj=iterativeRebuild.NavGenProj cellCountX=5 cellCountY=5
+LabShowSeedPoints
+LabShowGenerationTagVolumes
+LabShowCellBoxes
+// Open a NavGenProj
+LabOpenFile filename=../../../NavigationLab.output/examples/iterativeRebuild/iterativeRebuild.NavGenProj
+LabSetCameraAttitude eyePos=-29.6689,26.6581,1546.49 yaw=1.56382 pitch=-1.5608
+// Generate navdata globally once at first before modifying the scene
+LabGenerateNavGenProj generateIfNavDataHere=true navGenProjName=../../../NavigationLab.output/examples/iterativeRebuild/iterativeRebuild.NavGenProj
+LabHideCellBoxes
+// Let the user spawn a TagVolume whereever he wants, iterativeRebuild parameter activates autodetection of modified sectors (only enable rebuild of modified sectors, other sectors are set to Kaim::GenFlags::SECTOR_NO_REBUILD)
+LabShowActionGroup groupName="Generation"
+LabTriggerAction name="Iterative build GenerationTagVolume"

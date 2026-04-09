@@ -1,0 +1,27 @@
+//Several bots each avoiding different kinds of dynamic and static obstacles.
+LabOpenFile filename=ObstacleAvoidance.NavGenProj
+LabGenerateNavGenProj navgenprojname=ObstacleAvoidance.NavGenProj
+LabHideSeedPoints
+LabHideGenerationTagVolumes
+LabHideCellBoxes
+GameSpawnTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 posCount=3 posMaxCount=6 pos1=65.257133,72.926636,7.964970 pos2=62.151741,70.311996,7.866703 pos3=68.609352,69.233345,8.024849 pos4=0.000000,0.000000,0.000000 pos5=0.000000,0.000000,0.000000 pos6=0.000000,0.000000,0.000000 posAltMin=7.566703 posAltMax=9.024849
+GameSpawnBoxObstacle count=1 material=0 integrateInNavmesh=true pos=69.028160,74.510223,8.586998 target=69.028160,74.510223,8.586998 halfextents=2.500000,1.000000,0.500000 localcenter=0.000000,0.000000,0.000000 yawPitchRoll=10.000000,0.000000,0.000000 velocity=2.000000,0.000000,0.000000 rotationvelocity=0.000000,0.000000,0.000000
+GameSpawnBoxObstacle count=1 material=0 integrateInNavmesh=true pos=61.009266,67.086395,8.314503 target=61.009266,67.086395,8.314503 halfextents=2.500000,1.000000,0.500000 localcenter=0.000000,0.000000,0.000000 yawPitchRoll=-10.000000,0.000000,0.000000 velocity=-2.500000,0.000000,0.000000 rotationvelocity=0.000000,0.000000,0.000000
+GameSpawnBoxObstacle databaseIndex=-1 count=1 material=0 usePhysics=false pos=75.536949,49.588135,8.379873 target=55.195744,65.502907,8.018431 halfExtents=0.750000,0.750000,0.500000 localCenter=0.000000,0.000000,0.000000 yawPitchRoll=0.000000,0.000000,0.000000 velocity=3.000000,0.000000,0.000000 rotationvelocity=0.000000,0.000000,0.000000 dampingFactor=0.000000 minLinearSpeed=0.100000 minAngularSpeed=0.100000 integrateInNavmesh=true activateCoverPoints=false posOnBottom=true
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=3.000000 pos=71.475311,52.262939,8.125172 minDestinationDistance=20.000000 maxDestinationDistance=40.000000
+GameBotSetRoute count=1 posCount=2 posMaxCount=6 pos1=71.623688,52.208549,8.127750 pos2=73.604332,79.670914,8.206066 pos3=0.000000,0.000000,0.000000 pos4=0.000000,0.000000,0.000000 pos5=0.000000,0.000000,0.000000 pos6=0.000000,0.000000,0.000000
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=3.000000 pos=68.787750,51.882561,8.153393 minDestinationDistance=20.000000 maxDestinationDistance=40.000000
+GameBotSetRoute count=1 posCount=2 posMaxCount=6 pos1=68.430290,80.429977,8.126209 pos2=68.859741,52.108818,8.140762 pos3=0.000000,0.000000,0.000000 pos4=0.000000,0.000000,0.000000 pos5=0.000000,0.000000,0.000000 pos6=0.000000,0.000000,0.000000
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=3.000000 pos=65.844368,51.879944,8.068451 minDestinationDistance=20.000000 maxDestinationDistance=40.000000
+GameBotSetRoute count=1 posCount=2 posMaxCount=6 pos1=66.267365,80.795197,8.106766 pos2=65.852737,52.154396,8.070419 pos3=0.000000,0.000000,0.000000 pos4=0.000000,0.000000,0.000000 pos5=0.000000,0.000000,0.000000 pos6=0.000000,0.000000,0.000000
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=3.000000 pos=62.124893,51.428329,8.110855 minDestinationDistance=20.000000 maxDestinationDistance=40.000000
+GameBotSetRoute count=1 posCount=2 posMaxCount=6 pos1=62.514191,81.187714,8.051807 pos2=62.330257,51.437283,8.097084 pos3=0.000000,0.000000,0.000000 pos4=0.000000,0.000000,0.000000 pos5=0.000000,0.000000,0.000000 pos6=0.000000,0.000000,0.000000
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=3.000000 pos=57.201897,51.996426,8.031090 minDestinationDistance=20.000000 maxDestinationDistance=40.000000
+GameBotSetRoute count=1 posCount=2 posMaxCount=6 pos1=57.762169,80.579468,7.988602 pos2=58.215591,51.369671,8.120090 pos3=0.000000,0.000000,0.000000 pos4=0.000000,0.000000,0.000000 pos5=0.000000,0.000000,0.000000 pos6=0.000000,0.000000,0.000000
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=3.000000 pos=74.721245,83.791397,8.378181 minDestinationDistance=20.000000 maxDestinationDistance=40.000000
+GameBotSetRoute count=1 posCount=2 posMaxCount=6 pos1=55.771866,52.363163,7.996765 pos2=74.535332,82.769272,8.370377 pos3=0.000000,0.000000,0.000000 pos4=0.000000,0.000000,0.000000 pos5=0.000000,0.000000,0.000000 pos6=0.000000,0.000000,0.000000
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=3.000000 pos=57.258202,81.954346,8.098900 minDestinationDistance=20.000000 maxDestinationDistance=40.000000
+GameBotSetRoute count=1 posCount=2 posMaxCount=6 pos1=75.046371,52.062389,8.158634 pos2=57.277004,80.945374,8.028339 pos3=0.000000,0.000000,0.000000 pos4=0.000000,0.000000,0.000000 pos5=0.000000,0.000000,0.000000 pos6=0.000000,0.000000,0.000000
+GameSpawnBot count=1 wander=false avoidance=true maxDesiredLinearSpeed=3.000000 pos=70.519196,86.651062,8.365410 minDestinationDistance=20.000000 maxDestinationDistance=40.000000
+GameBotSetRoute count=1 posCount=6 posMaxCount=6 pos1=74.888840,51.498486,8.201721 pos2=66.288467,81.210220,8.143616 pos3=66.073631,52.056389,8.083885 pos4=57.213280,80.059952,7.975296 pos5=57.684937,51.192276,8.161285 pos6=74.754417,80.489258,8.281799
+LabSetCamera eyePos=43.6346,51.0021,35.2281 targetPos=44.2273,51.2886,34.4754 type=fly

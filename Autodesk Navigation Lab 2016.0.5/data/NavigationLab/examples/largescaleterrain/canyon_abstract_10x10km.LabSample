@@ -1,0 +1,16 @@
+// This LabSample demos the generation on a large scale terrain.
+// Here canyon is used as a base geometry that is mirrored to make a terrain of 10x10 Km.
+// The NavGenProj contains one sector for canyon with some seedpoints.
+// The sector will be mirrored (geometry, seedpoint) in the GeneratorInputProducer, so the geneation will run as if it was effectively different sectors.
+// The result of the generation will be one NavData file per sector accompanied with AbstractGraph file.
+// All AbstrractGraphs will be loaded, then you can play with the Astar query by loading only two NavMeshes, at start and destination locations of the query.
+// Note that the Query queue max working memory is increased in order to allow the entire AbstractGraphs to be traversed.
+LabOpenFile filename=canyon_abstract_10x10km.NavGenProj
+LabShowSeedPoints
+LabShowGenerationTagVolumes
+LabShowCellBoxes
+LabSetCameraAttitude eyePos=3834.78,-4416.5,10908.8 yaw=1.58825 pitch=-0.914388
+LabGenerateNavGenProj navgenprojname=canyon_abstract_10x10km.NavGenProj
+GameSetQueryQueueMaxWorkingMemory queueName=MainThread_Default maxSizeInBytes=7000000
+GameSetQueryQueueMaxWorkingMemory queueName=MainThread_PathFinder maxSizeInBytes=7000000
+LabShowDialog text="Load two NavData from the Scene panel, and from Queries panel start an AStar in the LabGame with 'Do traverse AbstractGraph' enabled from start and destination on the loaded NavMeshes." title="Play with AStar query."

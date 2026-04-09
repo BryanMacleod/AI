@@ -1,0 +1,27 @@
+// This sample shows the channel trajectory CPU consuption for 100 bots wandering without avoidance.
+//
+// Look at performance in the Profiling tab, nammelly UpdateBotsPathFollowing line in "SDK: 2. Profiling" group.
+//
+// You can then compare with shortcut trajectory result by changing the trajectory mode in BotsConfig/Trajectory widget.
+// You can also activate avoidance and compare again between channel and shortcut trajectory modes.
+
+LabProceduralGeometry outputname=Plane100x50 type=plane planeWidth=50.0 planeLength=100.0
+LabGenerateNavGenProj generateIfNavDataHere=true navgenprojname=../../../NavigationLab.output/Plane100x50/Plane100x50.NavGenProj
+
+LabSetCameraAttitude eyePos=0,-35,55 yaw=1.57080 pitch=-1.05
+
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 pos=22,-17,0  width=16.5 length=55 zRotation=-45 roundCornerTesselation=0
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 pos=25,20,0   width=25 length=55 zRotation=-45 roundCornerTesselation=0
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 pos=-10,26,0  width=1 length=50 zRotation=0 roundCornerTesselation=0
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 pos=-10,-26,0 width=1 length=50 zRotation=0 roundCornerTesselation=0
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 pos=-25,-15,0 width=3 length=50 zRotation=0 roundCornerTesselation=0
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 pos=-25,37,0  width=3 length=50 zRotation=0 roundCornerTesselation=0
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 pos=-35,-37,0 width=5 length=50 zRotation=0 roundCornerTesselation=0
+GameSpawnRectangleTagVolume navTag=1,-1,-1,-1,-1,-1,-1,-1 pos=-35,14,0  width=5 length=50 zRotation=0 roundCornerTesselation=0
+GameDelayCommandProcessing delayTime=1.0
+
+GameSpawnRandomBots count=100 databaseIndex=0 trajectorymode=channel
+
+LabSetupVisualDebugView element="Bot" field="Spline" selected=true notSelected=true
+LabSetupVisualDebugView element="Bot" field="Live Path" selected=false notSelected=false
+LabSetupVisualDebugView element="TagVolume" field="" selected=false notSelected=false

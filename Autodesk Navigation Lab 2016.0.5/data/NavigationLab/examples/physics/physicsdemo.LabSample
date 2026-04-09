@@ -1,0 +1,11 @@
+//Load a playground configured to play with physics.
+//You must activate physics in GameSpawnBoxObstacle command config (in the right pane). Then you can spawn physics-controlled BoxObstacles on the picked position using either (o) shortcut key or mouse right button contextual menu in viewport.
+LabOpenFile filename=physicsdemo.NavGenProj 
+LabGenerateNavGenProj navgenprojname=physicsdemo.NavGenProj
+LabHideSeedPoints
+LabHideGenerationTagVolumes
+LabHideCellBoxes
+LabSendAllStaticGeometry
+LabSetCameraAttitude eyePos=25.2522,-49.622,48.758 yaw=0.999264 pitch=-0.970872
+LabShowActionGroup groupname="physics"
+LabTriggerAction name="PhysicsSquareBox"

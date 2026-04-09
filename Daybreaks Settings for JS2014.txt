@@ -1,0 +1,56 @@
+NPC Zombies/Wildlife
+m_iMinimumNpcFieldOfView 90
+m_iMaximumNpcFieldOfView 270
+m_npcFadeOutTime 0
+
+Player Settings (Packet 0x61: ClientGameSettings)
+m_interactionsRadius 3.000
+m_iInteractionCheckRadius 3
+m_fFallDamageVelocityThreshold 15.00000
+m_fFallDamageVelocityMultiplier 11.00000
+
+Chat settings (Packet 0x: ChatBase)
+m_fBroadcastRange 1000.000
+m_iChatSayRadius 40
+m_iChatShoutRadius 400
+m_iChatNpcSayRadius 30
+
+
+
+m_key 1
+m_startingEquipmentSetId 0
+m_interactionsRadius 3.000
+m_fBroadcastRange 1000.000
+m_encounterAcceptTimerr 1000
+m_tutorialEncounterId 0
+m_tutorialGeometryId 0
+m_fDefaultMaxMovement 6.500
+m_npcFadeOutTime 0
+m_enforcerProfileId 0
+m_refereeProfileId 1
+m_fteObjectiveSetId -1
+m_maxQuestsNonMember 0
+m_maxQuestsMember 0
+m_objectiveTargetReacquireInterval 0
+m_iChatSayRadius 40
+m_iChatShoutRadius 400
+m_iChatNpcSayRadius 30
+m_guildCreateRequirementId 0
+m_iInteractionCheckRadius 3
+m_startingSocialZoneDefinitionId 95
+m_bAllowAutoJump 1
+m_defaultMatchmakingRequestTimeout 0
+m_iMinimumNpcFieldOfView 90
+m_iMaximumNpcFieldOfView 270
+m_comboTimeOut 2500
+m_iBaseInventorySpace 9999
+m_useSingleEquipmentRecord 1
+m_useSingleExperienceRecord 1
+m_useExperienceCostAccounting 0
+m_iKnockoutTimer 0
+m_iRevivableTimer 10000
+m_iOverkillHP 0
+m_iFacilityRespawnTime 15000
+m_iSquadRespawnTime 150000
+m_fFallDamageVelocityThreshold 15.00000
+m_fFallDamageVelocityMultiplier 11.00000
